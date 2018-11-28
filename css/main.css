@@ -14,11 +14,18 @@ h1{
 
 body {
 	background-color: #032032;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .navbar {
 	background-color: #031826;
   height: 75px;
+  position: fixed !important;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index:999;
 }
 
 .content > h1 {
