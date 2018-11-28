@@ -1,14 +1,106 @@
 h1{
   text-align: center;
 }
+
 .card{
   width: 90%;
   max-height: 100%;
 }
-img{
-  width: 100%;
-}
+
 .card-text{
   max-height: 100%;
   height: 100px;
+}
+
+body {
+	background-color: #032032;
+}
+
+.navbar {
+	background-color: #031826;
+  height: 75px;
+}
+
+.content > h1 {
+	text-align: center;
+}
+
+.info-box{
+  background: #073451; darker blue
+}
+
+.highlight-box{
+  background: #357abf; /*lighter blue*/
+}
+
+.gen-text{
+  color: white;
+}
+
+.font-highlight{
+  color: #d79e1d;
+}
+
+.signup-form, .login-form{
+  margin: 0;
+}
+
+.login-form{
+  margin-right: 10px;
+}
+
+.btn-signup, .btn-login{
+  color: #d79e1d;
+  background-color: transparent;
+  background-image: none;
+  border-color: #d79e1d;
+}
+
+.btn-signup:hover, .btn-login:hover{
+  color: #E7C477;
+  background-color: #E7C477;
+  background-image: none;
+  border-color: #E3BB60;
+  color: #031826;
+}
+
+.btn-signup:active, .btn-login:active{
+  color: #E7C477;
+  background-color: #F3E1BB;
+  background-image: none;
+  border-color: #E3BB60;
+  color: #031826;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #031826;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.fa-facebook-square{
+  margin-left: 20px !important;
+  margin-right: 5px !important;
+}
+
+.fb-link{
+  color: #d79e1d;
+}
+
+.fb-link:hover{
+  color: #357abf;
+}
+
+
+
+@media screen and (max-width: 885px) {
+
 }
