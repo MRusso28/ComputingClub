@@ -111,3 +111,35 @@ body {
 @media screen and (max-width: 885px) {
 
 }
+
+/* Membership screen styling  */
+
+#membershipH{
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+#formLabel{
+  color: white;
+}
+
+#formContainer{
+  padding: 10px;
+}
+
+#hearAboutUs{
+  padding-top: 30px;
+  margin: auto;
+}
+
+#padding{
+  padding-top: 10px;
+}
+
+#middle{
+  margin: auto;
+}
+
+#studentMargin{
+  margin-left: 30%;
+}
