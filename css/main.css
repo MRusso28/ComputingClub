@@ -204,8 +204,28 @@ body {
 #exploreBtn{
   float: right;
   margin-top: 70px;
+  background-color: #032032;
+  height: 50px;
 }
 #officerName{
-  font-size: 20px;
-  float: left;
+  font-size: 15px;
+  text-align: left;
+}
+#officerText{
+  font-size: 12px;
+  margin-left: 10%;
+}
+.overlayButton {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  margin-right: 25%;
+  margin-top: 15%;
+
+}
+.card:hover .overlayButton {
+  opacity: 1;
 }
