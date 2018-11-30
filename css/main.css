@@ -143,3 +143,89 @@ body {
 #studentMargin{
   margin-left: 30%;
 }
+
+/*card layout for stuents*/
+.card-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card-container:hover .card {
+  opacity: .7;
+  cursor: pointer;
+  filter: grayscale(1);
+}
+
+.card:hover #imgInfo {
+  opacity: 1;
+}
+
+.card-container .card {
+  margin: 10px;
+  width: calc(100% / 3 - 20px);
+  float: left;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .05);
+  background: #FFF;
+  -webkit-transition: .3s all ease;
+  transition: .15s all ease;
+}
+
+.card-container .card:hover {
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, .15);
+  transform: scale(1.025);
+  opacity: 1;
+  filter: grayscale(0);
+  transition: .35s all ease;
+}
+
+.card-container .card img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  max-height: 380px;
+}
+.card:hover .overlay {
+  height: 30%;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #032032;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+#exploreBtn{
+  float: right;
+  margin-top: 70px;
+  background-color: #032032;
+  height: 50px;
+}
+#officerName{
+  font-size: 15px;
+  text-align: left;
+}
+#officerText{
+  font-size: 12px;
+  margin-left: 10%;
+}
+.overlayButton {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  margin-right: 25%;
+  margin-top: 15%;
+
+}
+.card:hover .overlayButton {
+  opacity: 1;
+}
