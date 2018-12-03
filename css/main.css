@@ -1,6 +1,4 @@
-h1{
-  text-align: center;
-}
+
 
 .card{
   width: 90%;
@@ -125,7 +123,7 @@ body {
 }
 
 
-.jumbotron{
+.jumbotron-welcome{
   background-image: url("../images/jumbo.png");
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
@@ -158,7 +156,7 @@ body {
   text-align: left;
 }
 
-.inner-content{
+.inner-content-home{
   display: flex;
   max-width: 1200px;
   margin-left: auto;
@@ -232,8 +230,58 @@ body {
   margin-bottom: 10px;
 }
 
+/*Events styling*/
+.jumbotron-event{
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
 
+.jumbo-content{
+  width: 100%;
+}
 
+.hackathon{
+  background-image: url("../images/jumbo-event1.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-position: center;
+}
+
+.github{
+  background-image: url("../images/jumbo-event2.png");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+}
+
+.event-header{
+  margin-bottom: 30px;
+}
+
+.event-info{
+  background: #357abf;
+  width: 100%;
+}
+
+/* .hackathon-div{
+    visibility: hidden;
+}
+
+.github-div{
+    visibility: hidden;
+} */
+
+.event-text{
+  padding: 10px;
+  text-align: center;
+}
+
+.date-time{
+  text-align: center;
+}
 
 
 @media screen and (max-width: 1300px) {
