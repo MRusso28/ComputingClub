@@ -16,6 +16,8 @@ body {
 	background-color: #032032;
   margin-top: 100px;
   margin-bottom: 100px;
+  padding-right: 6%;
+  padding-left: 6%;
 }
 
 .navbar {
@@ -56,14 +58,14 @@ body {
   margin-right: 10px;
 }
 
-.btn-signup, .btn-login{
+.btn-action, .btn-action{
   color: #d79e1d;
   background-color: transparent;
   background-image: none;
   border-color: #d79e1d;
 }
 
-.btn-signup:hover, .btn-login:hover{
+.btn-action:hover, .btn-action:hover{
   color: #E7C477;
   background-color: #E7C477;
   background-image: none;
@@ -71,7 +73,7 @@ body {
   color: #031826;
 }
 
-.btn-signup:active, .btn-login:active{
+.btn-action:active, .btn-action:active{
   color: #E7C477;
   background-color: #F3E1BB;
   background-image: none;
@@ -116,27 +118,121 @@ body {
 .carousel{
   margin-left: auto;
   margin-right: auto;
-  max-width: 530px;
-  max-height: 325px;
+  max-width: 700px;
+  max-height: 500px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
-/*home screen*/
+
 .jumbotron{
-  background-image: url("../images/jumbo.jpg");
-  height: 100%;
-  max-width: 1170px;
+  background-image: url("../images/jumbo.png");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: top;
+
+}
+
+
+.carousel-caption{
+  position: relative;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.caro-container{
+  padding-bottom: 80px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .welcome{
   text-align: left;
 }
 
+.inner-content{
+  display: flex;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 
-
-
-@media screen and (max-width: 885px) {
 
 }
+
+.home-info{
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.announcements-text{
+  text-align: left;
+}
+
+.mission-div{
+
+}
+
+.announcements-div{
+
+}
+
+.seperate-line{
+  height: 2px;
+  background: #357abf;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.become-member-div{
+  margin-top: 10px;
+}
+
+.btn-become-member{
+    font-size: 25px;
+}
+
+
+
+
+@media screen and (max-width: 1300px) {
+  .carousel{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    max-height: 350px;
+
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  /* .carousel{
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 300px;
+      max-height: 200px;
+  } */
+
+  .inner-content{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home-info{
+    margin-top: 20px;
+  }
+}
+
 
 /* Membership screen styling  */
 
