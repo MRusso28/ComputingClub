@@ -302,7 +302,7 @@ body {
       max-height: 200px;
   } */
 
-  .inner-content{
+  .inner-content-home{
     flex-wrap: wrap;
     justify-content: center;
   }
