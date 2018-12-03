@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <title>Quinnipiac Computing Club</title>
   <link rel="shortcut icon" type="image/png" href="images/icon.png"/>
+  <script src="js/membership.js"></script>
 </head>
 
 <body>
@@ -58,23 +59,23 @@
         <label for="exampleFormControlInput1" class="gen-text">Full Name</label>
         <div class="row">
           <div class="col">
-            <input type="text" class="form-control" placeholder="First name">
+            <input type="text" class="form-control" placeholder="First name" id="firstname">
           </div>
           <div class="col">
-            <input type="text" class="form-control" placeholder="Last name">
+            <input type="text" class="form-control" placeholder="Last name" id="lastname">
           </div>
         </div>
         <div class="form-group" id="padding">
           <label for="exampleFormControlInput1" class="gen-text">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" >
         </div>
         <div class="row">
           <div class="col">
             <label for="exampleFormControlInput1" class="gen-text">Phone number</label>
-            <input type="text" class="form-control" placeholder="(123) 456-7890">
+            <input type="text" class="form-control" placeholder="(123) 456-7890" id="phone">
           </div>
           <div class="col">
-            <label for="exampleFormControlInput1" class="gen-text">Graduation Year</label>
+            <label for="exampleFormControlInput1" class="gen-text">Class Year</label>
             <select id="inputState" class="form-control">
               <option selected>Choose...</option>
               <option>Freshman</option>
@@ -87,7 +88,7 @@
         <div class="row">
          <h2 class="gen-text" id="hearAboutUs">How did you hear about us?</h2>
         </div>
-        <div class="row">
+        <div class="row" id="checkrow">
           <div class="row" id="middle">
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
@@ -108,7 +109,7 @@
           </div>
         </div>
         <div class="row" id="padding">
-          <button type="button" class="btn btn-primary" id="middle">Submit Application</button>
+          <button type="button" class="btn btn-primary" id="middle" onclick="validate()">Submit Application</button>
 
         </div>
       </form>
