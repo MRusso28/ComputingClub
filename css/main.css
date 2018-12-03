@@ -91,6 +91,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  z-index: 999;
 }
 
 .fa-facebook-square{
@@ -105,6 +106,31 @@ body {
 .fb-link:hover{
   color: #357abf;
 }
+
+/*event screen styling*/
+.carousel-inner > .carousel-item > img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 530px;
+  max-height: 325px;
+}
+
+/*home screen*/
+.jumbotron{
+  background-image: url("../images/jumbo.jpg");
+  height: 100%;
+  max-width: 1170px;
+}
+
+.welcome{
+  text-align: left;
+}
+
 
 
 
