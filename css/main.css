@@ -403,10 +403,14 @@ body {
   transition: .5s ease;
 }
 #exploreBtn{
-  float: right;
-  margin-top: 70px;
-  background-color: #032032;
+  background-color: #031826;
   height: 50px;
+}
+#exploreBtn:hover{
+  text-decoration: underline;
+  text-decoration-color: white;
+  color: white;
+  border-color: white;
 }
 #officerName{
   font-size: 15px;
@@ -417,16 +421,18 @@ body {
   margin-left: 10%;
 }
 .overlayButton {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  transition: .5s ease;
   opacity: 0;
-  margin-right: 25%;
-  margin-top: 15%;
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 .card:hover .overlayButton {
   opacity: 1;
+}
+#manageOfficer{
+  color: white;
 }
