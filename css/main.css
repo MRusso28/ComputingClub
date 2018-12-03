@@ -439,4 +439,39 @@ body {
 }
 #manageOfficer{
   color: white;
+  height: 110%;
+}
+#smallCol{
+  width: 8%;
+}
+.fas:hover{
+  size: 10px;
+  color: #E7C477;
+}
+#myTable{
+  height: 300px;
+  font-size: 25px;
+}
+#addMember{
+  width: 20%;
+  transition: .5s ease;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#manageMember{
+  width: 20%;
+  transition: .5s ease;
+  position: absolute;
+  top: 118%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  margin-bottom: 10%;
+  margin-top: 2%;
 }
