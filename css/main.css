@@ -179,14 +179,6 @@ body {
   text-align: left;
 }
 
-.mission-div{
-
-}
-
-.announcements-div{
-
-}
-
 .seperate-line{
   height: 2px;
   background: #357abf;
@@ -201,6 +193,45 @@ body {
 .btn-become-member{
     font-size: 25px;
 }
+
+.nav-link{
+  color: white;
+}
+
+.tab-pane{
+  color: white;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.gen-info{
+  margin-top: 40px;
+  background: #073451; darker blue
+}
+
+.nav-item.nav-link.active{
+    background: #357abf; /*lighter blue*/
+    color: white;
+    border-color: #d79e1d;
+}
+
+.nav-item.nav-link:hover{
+  color: #357abf;
+  border-color: #d79e1d;
+}
+
+.nav-item.nav-link.active:hover{
+  color: #073451;
+}
+
+.nav-link, .nav-tabs{
+    border-color: #d79e1d;
+}
+
+#goals-text, #meetings-text{
+  margin-bottom: 10px;
+}
+
 
 
 
