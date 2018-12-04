@@ -38,17 +38,14 @@
           <a class="nav-link" href="officers.html">Officers<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="checklist.html">CheckList</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="applymembership.html">Apply</a>
+          <a class="nav-link" href="checklist.html">Checklist</a>
         </li>
       </ul>
       <form class="form-inline login-form">
         <a><button class="btn btn-action" type="button">Login</button></a>
       </form>
       <form class="form-inline signup-form">
-        <a><button class="btn btn-action" type="button">Signup</button></a>
+          <a href="applymembership.html"><button class="btn btn-action" type="button">Apply</button></a>
       </form>
   </nav>
 
@@ -68,21 +65,21 @@
         <tr>
           <th scope="row"><i class="fas fa-plus"></i></th>
           <th scope="row"><i class="fas fa-pencil-alt"></i></th>
-          <th scope="row"><i class="fas fa-trash-alt"></i></th>
+          <th scope="row"><i class="fas fa-trash-alt" id="trashIcon1"></i></th>
           <td>David Lepore</td>
           <td>David.Lepore@quinnipiac.edu</td>
         </tr>
         <tr>
           <th scope="row"><i class="fas fa-plus"></i></th>
           <th scope="row"><i class="fas fa-pencil-alt"></i></th>
-          <th scope="row"><i class="fas fa-trash-alt"></i></th>
+          <th scope="row"><i class="fas fa-trash-alt" id="trashIcon2"></i></th>
           <td>Joseph White</td>
           <td>Joseph.White@quinnipiac.edu</td>
         </tr>
         <tr>
           <th scope="row"><i class="fas fa-plus"></i></th>
           <th scope="row"><i class="fas fa-pencil-alt"></i></th>
-          <th scope="row"><i class="fas fa-trash-alt"></i></th>
+          <th scope="row"><i class="fas fa-trash-alt" id="trashIcon3"></i></th>
           <td>Megan Forster</td>
           <td>Megan.Forster@quinnipiac.edu</td>
         </tr>
@@ -90,7 +87,6 @@
     </table>
   </div>
   <a><button class="btn btn-action" id="addMember" type="button" data-toggle="modal" data-target="#myModal">Add Member</button></a>
-
 
   <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -123,6 +119,7 @@
     <span><i class="far fa-copyright"></i>Quinnipiac Computing Club</span>
     <a href="https://www.facebook.com/groups/QuinnipiacComputingClub/" class="fb-link"><i class="fab fa-facebook-square"></i>Join us on Facebook</a>
   </footer>
+  <script src="js/home.js"></script>
 
 </body>
 
