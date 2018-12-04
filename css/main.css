@@ -330,6 +330,11 @@ body {
   padding-top: 10px;
 }
 
+#padding2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 #middle {
   margin: auto;
 }
@@ -340,6 +345,16 @@ body {
 
 #checkrow {
   padding: 20px;
+}
+
+#learn{
+  font-size: 20px;
+}
+
+#apply{
+  margin-left: 35%;
+  font-size: 20px;
+
 }
 
 /*card layout for stuents*/
