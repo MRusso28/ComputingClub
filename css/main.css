@@ -305,6 +305,10 @@ body {
   .home-info {
     margin-top: 20px;
   }
+
+  .col-lg-4{
+    margin-bottom: 50px; 
+  }
 }
 
 /* Membership screen styling  */
