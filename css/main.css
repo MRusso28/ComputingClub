@@ -330,6 +330,7 @@ body {
   padding-top: 10px;
 }
 
+
 #padding2 {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -350,13 +351,6 @@ body {
 #learn{
   font-size: 20px;
 }
-
-#apply{
-  margin-left: 35%;
-  font-size: 20px;
-
-}
-
 /*card layout for stuents*/
 .card-container {
   margin-top: 50px;
@@ -494,8 +488,10 @@ body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-  margin-top: 25%;
+  margin-top: 30%;
+
 }
+
 
 #submitBtn {
   float: right;
