@@ -1,17 +1,15 @@
-
-
-.card{
+.card {
   width: 100%;
   max-height: 100%;
 }
 
-.card-text{
+.card-text {
   max-height: 100%;
   height: 100px;
 }
 
 body {
-	background-color: #032032;
+  background-color: #032032;
   margin-top: 100px;
   margin-bottom: 100px;
   padding-right: 6%;
@@ -19,51 +17,53 @@ body {
 }
 
 .navbar {
-	background-color: #031826;
+  background-color: #031826;
   height: 75px;
   position: fixed !important;
   right: 0;
   left: 0;
   top: 0;
-  z-index:999;
+  z-index: 999;
 }
 
-.content > h1 {
-	text-align: center;
+.content>h1 {
+  text-align: center;
 }
 
-.info-box{
-  background: #073451; darker blue
+.info-box {
+  background: #073451;
+  darker blue
 }
 
-.highlight-box{
-  background: #357abf; /*lighter blue*/
+.highlight-box {
+  background: #357abf;
+  /*lighter blue*/
 }
 
-.gen-text{
+.gen-text {
   color: white;
 }
 
-.font-highlight{
+.font-highlight {
   color: #d79e1d;
 }
 
-.signup-form, .login-form{
+.signup-form, .login-form {
   margin: 0;
 }
 
-.login-form{
+.login-form {
   margin-right: 10px;
 }
 
-.btn-action, .btn-action{
+.btn-action, .btn-action {
   color: #d79e1d;
   background-color: transparent;
   background-image: none;
   border-color: #d79e1d;
 }
 
-.btn-action:hover, .btn-action:hover{
+.btn-action:hover, .btn-action:hover {
   color: #E7C477;
   background-color: #E7C477;
   background-image: none;
@@ -71,7 +71,7 @@ body {
   color: #031826;
 }
 
-.btn-action:active, .btn-action:active{
+.btn-action:active, .btn-action:active {
   color: #E7C477;
   background-color: #F3E1BB;
   background-image: none;
@@ -79,7 +79,7 @@ body {
   color: #031826;
 }
 
-.footer{
+.footer {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -94,26 +94,26 @@ body {
   z-index: 999;
 }
 
-.fa-facebook-square{
+.fa-facebook-square {
   margin-left: 20px !important;
   margin-right: 5px !important;
 }
 
-.fb-link{
+.fb-link {
   color: #d79e1d;
 }
 
-.fb-link:hover{
+.fb-link:hover {
   color: #357abf;
 }
 
 /*event screen styling*/
-.carousel-inner > .carousel-item > img {
+.carousel-inner>.carousel-item>img {
   width: 100%;
   height: 100%;
 }
 
-.carousel{
+.carousel {
   margin-left: auto;
   margin-right: auto;
   max-width: 700px;
@@ -122,8 +122,7 @@ body {
   flex-shrink: 0;
 }
 
-
-.jumbotron-welcome{
+.jumbotron-welcome {
   background-image: url("../images/jumbo.png");
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
@@ -131,11 +130,9 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-position: top;
-
 }
 
-
-.carousel-caption{
+.carousel-caption {
   position: relative;
   right: auto;
   left: auto;
@@ -146,26 +143,24 @@ body {
   flex-shrink: 0;
 }
 
-.caro-container{
+.caro-container {
   padding-bottom: 80px;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-.welcome{
+.welcome {
   text-align: left;
 }
 
-.inner-content-home{
+.inner-content-home {
   display: flex;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-
-
 }
 
-.home-info{
+.home-info {
   padding: 10px;
   text-align: center;
   display: flex;
@@ -173,83 +168,85 @@ body {
   justify-content: space-evenly;
 }
 
-.announcements-text{
+.announcements-text {
   text-align: left;
 }
 
-.seperate-line{
+.seperate-line {
   height: 2px;
   background: #357abf;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.become-member-div{
+.become-member-div {
   margin-top: 10px;
 }
 
-.btn-become-member{
-    font-size: 25px;
+.btn-become-member {
+  font-size: 25px;
 }
 
-.nav-link{
+.nav-link {
   color: white;
 }
 
-.tab-pane{
+.tab-pane {
   color: white;
   padding-right: 10px;
   padding-left: 10px;
 }
 
-.gen-info{
+.gen-info {
   margin-top: 40px;
-  background: #073451; darker blue
+  background: #073451;
+  darker blue
 }
 
-.nav-item.nav-link.active{
-    background: #357abf; /*lighter blue*/
-    color: white;
-    border-color: #d79e1d;
+.nav-item.nav-link.active {
+  background: #357abf;
+  /*lighter blue*/
+  color: white;
+  border-color: #d79e1d;
 }
 
-.nav-item.nav-link:hover{
+.nav-item.nav-link:hover {
   color: #357abf;
   border-color: #d79e1d;
 }
 
-.nav-item.nav-link.active:hover{
+.nav-item.nav-link.active:hover {
   color: #073451;
 }
 
-.nav-link, .nav-tabs{
-    border-color: #d79e1d;
+.nav-link, .nav-tabs {
+  border-color: #d79e1d;
 }
 
-#goals-text, #meetings-text{
+#goals-text, #meetings-text {
   margin-bottom: 10px;
 }
 
 /*Events styling*/
-.jumbotron-event{
+.jumbotron-event {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
 }
 
-.jumbo-content{
+.jumbo-content {
   width: 100%;
 }
 
-.hackathon{
+.hackathon {
   background-image: url("../images/jumbo-event1.jpg");
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
   background-position: center;
 }
 
-.github{
+.github {
   background-image: url("../images/jumbo-event2.png");
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: darken;
@@ -257,12 +254,12 @@ body {
   background-size: cover;
 }
 
-.event-header{
+.event-header {
   margin-bottom: 30px;
   text-align: center;
 }
 
-.event-info{
+.event-info {
   background: #357abf;
   width: 100%;
 }
@@ -274,79 +271,74 @@ body {
 .github-div{
     visibility: hidden;
 } */
-
-.event-text{
+.event-text {
   padding: 10px;
   text-align: center;
 }
 
-.date-time{
+.date-time {
   text-align: center;
 }
 
-
 @media screen and (max-width: 1300px) {
-  .carousel{
+  .carousel {
     margin-left: auto;
     margin-right: auto;
     max-width: 500px;
     max-height: 350px;
-
   }
 }
 
 @media screen and (max-width: 1000px) {
+
   /* .carousel{
       margin-left: auto;
       margin-right: auto;
       max-width: 300px;
       max-height: 200px;
   } */
-
-  .inner-content-home{
+  .inner-content-home {
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .home-info{
+  .home-info {
     margin-top: 20px;
   }
 }
 
-
 /* Membership screen styling  */
-
-#membershipH{
+#membershipH {
   margin: auto;
   padding-bottom: 50px;
 }
 
-#formLabel{
+#formLabel {
   color: white;
 }
 
-#formContainer{
+#formContainer {
   padding: 10px;
 }
 
-#hearAboutUs{
+#hearAboutUs {
   padding-top: 30px;
   margin: auto;
 }
 
-#padding{
+#padding {
   padding-top: 10px;
 }
 
-#middle{
+#middle {
   margin: auto;
 }
 
-#studentMargin{
+#studentMargin {
   margin-left: 30%;
 }
 
-#checkrow{
+#checkrow {
   padding: 20px;
 }
 
@@ -382,7 +374,7 @@ body {
 
 .card-container .card:hover {
   box-shadow: 0 0 8px 3px rgba(0, 0, 0, .15);
-  transform: scale(1.025);
+  transform: scale(1.035);
   opacity: 1;
   filter: grayscale(0);
   transition: .35s all ease;
@@ -394,9 +386,11 @@ body {
   margin: 0;
   max-height: 380px;
 }
+
 .card:hover .overlay {
   height: 30%;
 }
+
 .overlay {
   position: absolute;
   bottom: 0;
@@ -408,24 +402,29 @@ body {
   height: 0;
   transition: .5s ease;
 }
-#exploreBtn{
+
+#exploreBtn {
   background-color: #031826;
   height: 50px;
 }
-#exploreBtn:hover{
+
+#exploreBtn:hover {
   text-decoration: underline;
   text-decoration-color: white;
   color: white;
   border-color: white;
 }
-#officerName{
+
+#officerName {
   font-size: 15px;
   text-align: left;
 }
-#officerText{
+
+#officerText {
   font-size: 12px;
   margin-left: 10%;
 }
+
 .overlayButton {
   transition: .5s ease;
   opacity: 0;
@@ -436,25 +435,31 @@ body {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
+
 .card:hover .overlayButton {
   opacity: 1;
 }
-#manageOfficer{
+
+#manageOfficer {
   color: white;
   height: 110%;
 }
-#smallCol{
+
+#smallCol {
   width: 8%;
 }
-.fas:hover{
+
+.fas:hover {
   size: 10px;
   color: #E7C477;
 }
-#myTable{
+
+#myTable {
   height: 300px;
   font-size: 25px;
 }
-#addMember{
+
+#addMember {
   width: 20%;
   transition: .5s ease;
   position: absolute;
@@ -465,7 +470,7 @@ body {
   text-align: center;
 }
 
-#manageMember{
+#manageMember {
   width: 20%;
   height: 7%;
   transition: .5s ease;
@@ -476,9 +481,11 @@ body {
   text-align: center;
   margin-top: 25%;
 }
-#submitBtn{
+
+#submitBtn {
   float: right;
 }
-#addNew{
+
+#addNew {
   float: left;
 }
