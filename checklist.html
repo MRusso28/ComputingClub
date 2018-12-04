@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <title>Quinnipiac Computing Club</title>
   <link rel="shortcut icon" type="image/png" href="images/icon.png" />
+
 </head>
 
 <body>
@@ -34,12 +35,10 @@
         <li class="nav-item">
           <a class="nav-link" href="events.html">Events</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="officers.html">Officers<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-        </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="checklist.html">CheckList</a>
         </li>
       </ul>
@@ -50,64 +49,36 @@
         <a><button class="btn btn-action" type="button">Signup</button></a>
       </form>
   </nav>
+  <h1 class="titlebar gen-text event-header">Event CheckList</h1>
 
-  <section id="content">
-    <h1 class="titlebar gen-text event-header">Current Officers</h1>
-    <div class="card-container">
-      <div class="card">
-        <a href=""><img src="images/popeye.jpg" /> </a>
-        <div class="overlay">
-          <div>
-            <h1 class="gen-text" id="officerName">David Lepore</h1>
-            <p class="gen-text" id="officerText">Major: Computer Science</p>
-            <p class="gen-text" id="officerText">Year: Senior</p>
-            <p class="gen-text" id="officerText">Graduation: 2019</p>
-          </div>
-        </div>
-        <div class="overlayButton">
-          <a><button class="btn btn-action" type="button" id="exploreBtn">Explore Student</button></a>
-        </div>
+  <div class="myContainer">
+    <div class="task__head task--row">YOUR TASKS (CLICK & HOLD TO REMOVE)</div>
+    <form action="">
+      <div class="task__list">
+        <label for="task--1" class="task"><input class="task__check" type="checkbox" id="task--1" />
+          <div class="task__field task--row"> Task one<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+        </label>
+        <label for="task--2" class="task"><input class="task__check" type="checkbox" id="task--2" />
+          <div class="task__field task--row"> Second Task<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+        </label>
+        <label for="task--3" class="task"><input class="task__check" type="checkbox" id="task--3" />
+          <div class="task__field task--row"> Third task<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+        </label>
+        <label for="task--4" class="task"><input class="task__check" type="checkbox" id="task--4" />
+          <div class="task__field task--row"> Task four<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+        </label>
       </div>
-
-      <div class="card">
-        <a href=""><img src="images/joe.png" /> </a>
-        <div class="overlay">
-          <div>
-            <h1 class="gen-text" id="officerName">Joseph White</h1>
-            <p class="gen-text" id="officerText">Major: Computer Science</p>
-            <p class="gen-text" id="officerText">Year: Junior</p>
-            <p class="gen-text" id="officerText">Graduation: 2019</p>
-          </div>
-        </div>
-        <div class="overlayButton">
-          <a><button class="btn btn-action" type="button" id="exploreBtn">Explore Student</button></a>
-        </div>
+      <div class="task--row task__footer">
+        <input class="task__add" type="text" value="+ Click here to add new task">
       </div>
-
-      <div class="card">
-        <a href=""><img src="images/meg.jpg" /> </a>
-        <div class="overlay">
-          <div>
-            <h1 class="gen-text" id="officerName">Megan Forster</h1>
-            <p class="gen-text" id="officerText">Major: Computer Science</p>
-            <p class="gen-text" id="officerText">Year: Sophmore</p>
-            <p class="gen-text" id="officerText">Graduation: 2021</p>
-          </div>
-        </div>
-        <div class="overlayButton">
-          <a><button class="btn btn-action" type="button" id="exploreBtn">Explore Student</button></a>
-        </div>
-      </div>
-      <section>
-
-        <div>
-          <a href="manageMember.html"><button class="btn btn-action" id="manageMember" type="button">Manage Club Members</button></a>
-        </div>
-
-        <footer class="footer">
-          <span><i class="far fa-copyright"></i>Quinnipiac Computing Club</span>
-          <a href="https://www.facebook.com/groups/QuinnipiacComputingClub/" class="fb-link"><i class="fab fa-facebook-square"></i>Join us on Facebook</a>
-        </footer>
+    </form>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <span><i class="far fa-copyright"></i>Quinnipiac Computing Club</span>
+    <a href="https://www.facebook.com/groups/QuinnipiacComputingClub/" class="fb-link"><i class="fab fa-facebook-square"></i>Join us on Facebook</a>
+  </footer>
+  <script src="js/check.js"></script>
 
 </body>
 
