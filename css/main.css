@@ -489,11 +489,11 @@ body {
   height: 7%;
   transition: .5s ease;
   position: absolute;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-  margin-top: 60px;
 }
 
 
@@ -652,4 +652,15 @@ input {
   transform: scale(1.5, 2);
   height: 0;
   opacity: 0;
+}
+.pt-3-half {
+padding-top: 1.4rem;
+}
+
+#table{
+  background-color:  #032032;
+  color: white;
+}
+#tableCard{
+  background-color: #357abf;
 }
