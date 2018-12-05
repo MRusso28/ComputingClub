@@ -487,18 +487,16 @@ body {
   text-align: center;
 }
 
-#manageMember {
-  width: 200px;
-  height: 7%;
-  transition: .5s ease;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+#manageMember{
+  font-size: 20px;
 }
 
+.div-manage-club-members{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
 
 #submitBtn {
   float: right;
