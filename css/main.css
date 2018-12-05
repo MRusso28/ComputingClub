@@ -503,8 +503,6 @@ body {
 }
 
 /*css for checklist*/
-@import url(https://fonts.googleapis.com/css?family=Space+Mono:400,700);
-
 input {
   font-size: 1em;
   outline: none;
@@ -622,6 +620,7 @@ input {
 
 .task__check:checked+.task__field {
   color: #47D185;
+  font-weight: bold;
 }
 
 .task__important {
