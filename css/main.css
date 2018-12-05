@@ -3,6 +3,15 @@
   max-height: 100%;
 }
 
+.card-career{
+    background: #357abf;
+    color: white;
+}
+
+.div-learn-more{
+  background: #073451;
+}
+
 .card-text {
   max-height: 100%;
   height: 100px;
@@ -185,6 +194,7 @@ body {
 
 .btn-become-member {
   font-size: 25px;
+  background-color: #073451;
 }
 
 .nav-link {
@@ -264,13 +274,6 @@ body {
   width: 100%;
 }
 
-/* .hackathon-div{
-    visibility: hidden;
-}
-
-.github-div{
-    visibility: hidden;
-} */
 .event-text {
   padding: 10px;
   text-align: center;
