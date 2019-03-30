@@ -320,6 +320,14 @@ body {
   padding-bottom: 50px;
 }
 
+#underline{
+  text-decoration: underline;
+}
+
+#spacing{
+  padding: 20px;
+}
+
 #formLabel {
   color: white;
 }
@@ -740,4 +748,13 @@ padding-top: 1.4rem;
 }
 h3{
   color: white;
+}
+#careerImg{
+  width:90%;
+  height: auto;
+}
+#careerPage{
+  margin: auto;
+  margin-left: 10%;
+  margin-right: 10%;
 }
