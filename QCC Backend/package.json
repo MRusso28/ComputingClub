@@ -1,0 +1,17 @@
+{
+  "name": "loehle.russo.horton.qcc.website",
+  "version": "1.0.0",
+  "description": "Quinnipiac Computing Club website for Ruby",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "loader": "^2.1.1",
+    "mongodb": "^3.2.2",
+    "mongoose": "^5.4.21",
+    "node": "^11.12.0"
+  }
+}
