@@ -13,6 +13,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 var StudentModel = require('./models/student.js');
 var EventModel = require('./models/event.js')
 var CareerResourceModel = require('./models/career_resource.js')
+var ChecklistModel = require('./models/checklist.js')
 
 
 
@@ -29,6 +30,7 @@ var student = new StudentModel({
     name: 'Brandon Loehle',
     gradYear: 2019,
     password: 'abc123',
+    approved: true,
     officer: true
 });
 
@@ -123,6 +125,42 @@ careerRes.save().then(doc => {
             CareerResourceModel.findOneAndDelete({'name':'Find Internships'}, function(err){
                 if(err) console.log(err);
                 console.log('Sucessfully deleted career resource');
+            });
+        });
+    });
+
+
+
+}).catch(err => {
+    console.log(err);
+});
+
+//////////////////////TESTING CHECKLIST CRUD//////////////////////
+//create new checklist
+var checklist = new ChecklistModel({
+    title: 'Study Hall',
+    tasks: ['Order the food', 'Post to FB', 'Post to Discord'],
+    completed: false
+});
+
+//insert a new checklist
+checklist.save().then(doc => {
+    console.log('Saved: ' + doc);
+
+    //find that checklist
+    ChecklistModel.find({'title':'Study Hall'}, function(err, checklists){
+        if(err) console.log(err)
+        console.log('Found: ' + checklists);
+        
+        //update that checklist
+        ChecklistModel.findOneAndUpdate({'title':'Study Hall'}, {$set: {'completed':'true'}},  {new:true}, function(err, checklist){
+            if(err) console.log(err)
+            console.log('Updated: to' + checklist);
+    
+            //delete that checklist
+            ChecklistModel.findOneAndDelete({'title':'Study Hall'}, function(err){
+                if(err) console.log(err);
+                console.log('Sucessfully deleted checklist');
             });
         });
     });

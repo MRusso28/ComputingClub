@@ -6,6 +6,7 @@ var StudentSchema = Schema({
   name: {type: String, required: true},
   gradYear: {type: Number, required: true},
   password: {type: String, required: true},
+  approved: {type: Boolean, require: true},
   officer: {type: Boolean, required: true}
 });
 
