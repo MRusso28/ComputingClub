@@ -6,6 +6,9 @@ router.route("/events")
 .all((req,res,next)=>{
     next();
 })
-.post(event_controller.createEvent);//Public
+.get(event_controller.getAll)//get all events
+.put(event_controller.updateEvent)//update an event
+.delete(event_controller.deleteEvent)//delete an event
+.post(event_controller.createEvent);//post a new event
 
 module.exports = router;
