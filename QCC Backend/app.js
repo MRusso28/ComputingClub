@@ -2,7 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const port = 3000;
 const app = express();
-var cors = require('cors')
+var cors = require('cors');
+require('./config/passport');
 
 var mongoose = require('mongoose');
 var mongodb = 'mongodb+srv://qccAdmin:qccAdmin@cluster0-gmda3.mongodb.net/qccDB?retryWrites=true';
