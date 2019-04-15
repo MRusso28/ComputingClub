@@ -1,12 +1,12 @@
-$('.task__add').on('focus',function(){
+$('.task__add').on('focus', function() {
   $(this).val('');
 });
 
-$('.task__add').on('blur',function(){
+$('.task__add').on('blur', function() {
   $(this).val('+ add new task');
 });
 
-$('form').on('submit', function(event){
+$('form').on('submit', function(event) {
   event.preventDefault();
 
   var taskText = $('.task__add').val();
@@ -27,33 +27,35 @@ var lastDeletedTask = '';
 function checkList() {
 
 
-  $('.task').each(function(){
+  $('.task').each(function() {
 
     var $field = $(this).find('.task__field');
     var mousedown = false;
 
 
-    $field.on('mousedown', function(){
-        mousedown = true;
-        $field.addClass('shaking');
-        setTimeout(deleteTask,1000)
+    $field.on('mousedown', function() {
+      mousedown = true;
+      $field.addClass('shaking');
+      setTimeout(deleteTask, 1000)
     });
 
-    $field.on('mouseup', function(){
-        mousedown = false;
-        $field.removeClass('shaking');
+    $field.on('mouseup', function() {
+      mousedown = false;
+      $field.removeClass('shaking');
     });
 
-    function deleteTask(){
-      if(mousedown) {
+    function deleteTask() {
+      if (mousedown) {
         $field.addClass('delete');
         lastDeletedTask = $field.text();
         console.log(lastDeletedTask);
 
-        setTimeout(function(){
-           $field.remove();
+        setTimeout(function() {
+          $field.remove();
         }, 200);
-       } else {return;}
+      } else {
+        return;
+      }
     }
 
   });
