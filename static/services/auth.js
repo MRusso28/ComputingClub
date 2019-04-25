@@ -46,12 +46,12 @@ qccApp.factory("Auth", ["$http","$q","$window", function ($http, $q, $window) {
         return deferred.promise;
     }
 
-    function logout() {
+    function signout() {
         var deferred = $q.defer();
 
         $http({
             method: "POST",
-            url: "/api/logout",
+            url: "/students/auth/signout",
             headers: {
                 "access_token": userInfo.accessToken
             }
@@ -60,6 +60,8 @@ qccApp.factory("Auth", ["$http","$q","$window", function ($http, $q, $window) {
             $window.sessionStorage["userInfo"] = null;
             deferred.resolve(result);
         }, function (error) {
+            userInfo = null;
+            $window.sessionStorage["userInfo"] = null;
             deferred.reject(error);
         });
 
@@ -79,7 +81,7 @@ qccApp.factory("Auth", ["$http","$q","$window", function ($http, $q, $window) {
 
     return {
         login: login,
-        logout: logout,
+        signout: signout,
         apply: apply,
         getUserInfo: getUserInfo
     };

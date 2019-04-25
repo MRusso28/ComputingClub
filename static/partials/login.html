@@ -16,13 +16,13 @@
           <a class="nav-link" href="career.html">Career</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="events.html">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="officers.html">Officers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="checklist.html">Checklist</a>
+            <a class="nav-link" href="events.html" id="events-tab">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="officers.html">Officers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="checklist.html" id="checklist-tab">Checklist</a>
         </li>
       </ul>
       <form class="form-inline login-form">
@@ -35,7 +35,7 @@
   <div class="content">
 
     <div class="row">
-      <h1 class="gen-text" id="membershipH">Looking to apply for a membership? Just fill out the form below!</h1>
+      <h1 class="gen-text" id="membershipH">Login</h1>
     </div>
 
     <div class="container info-box" id="formContainer">
@@ -50,9 +50,6 @@
             <input type="password" class="form-control" placeholder="Password" id="password">
           </div>
         </div>
-        <div class="row">
-         <h2 class="gen-text" id="hearAboutUs">How did you hear about us?</h2>
-        </div>
         <div class="row" id="padding">
           <button type="button" class="btn btn-primary" id="middle" ng-click="login()">Login</button>
 
@@ -61,6 +58,12 @@
     </div>
 
     </div>
+    <script>
+        $(function(){
+          reload();
+        });
+
+  </script>
 
   <!-- Footer -->
   <footer class="footer">

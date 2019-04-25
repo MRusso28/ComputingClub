@@ -8,10 +8,10 @@ qccApp.controller("LoginController", ["$scope", "$location", "$window", "Auth", 
         Auth.login($scope.currUser)
         .then(function(result){
             console.log($window.sessionStorage["userInfo"]);
+            $location.path('/');
+
         }, function(error){
             alert('Invalid Login');
         });
-
-        
     };
 }]);

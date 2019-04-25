@@ -16,7 +16,7 @@
           <a class="nav-link" href="career.html">Career</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="events.html">Events</a>
+          <a class="nav-link" id="events-tab" ng-click="goToEvents()">Events</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="officers.html">Officers</a>
@@ -26,11 +26,13 @@
         </li>
       </ul>
       <form class="form-inline login-form">
-        <button class="btn btn-action" type="button" ng-click="login()">Login</button>
+        <button class="btn btn-action" type="button" ng-click="login()" id="login-btn">Login</button>
       </form>
       <form class="form-inline signup-form">
-          <a href="applymembership.html"><button class="btn btn-action" type="button">Apply</button></a>
+          <button class="btn btn-action" type="button" ng-click="applyForMembership()" id="apply-btn">Apply</button>
+          <button class="btn btn-action" type="button" ng-click="signout()" id="signout-btn">Sign Out</button>
       </form>
+
     </nav>
   <div class="content">
 
@@ -209,17 +211,9 @@
   </div>
 
   <script>
-    $(function(){
-      var user = JSON.parse(sessionStorage.getItem("userInfo"));
-      console.log(user);
-      if(!user.officer){
-        $('#checklist-tab').hide();
-      }else{
-        $('#checklist-tab').show();
-      }
-    
-
-    })
+        $(function(){
+          reload();
+        });
 
   </script>
 
