@@ -2,5 +2,8 @@ qccApp.controller("IndexController", ["$scope", "$location", "$window", function
     $scope.userInfo = null;
     $scope.applyForMembership = function(){
         $location.path("/apply");
+    };
+    $scope.login = function(){
+        $location.path("/login");
     }
 }]);

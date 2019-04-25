@@ -23,3 +23,4 @@ function myFunction3() {
 $( "#trashIcon3" ).click(function() {
   myFunction3();
 });
+
