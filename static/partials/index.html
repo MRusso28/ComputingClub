@@ -1,0 +1,215 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" height="35" class="d-inline-block align-top" alt="">
+      Quinnipiac Computing Club
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="career.html">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="events.html">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="officers.html">Officers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="checklist.html">Checklist</a>
+        </li>
+      </ul>
+      <form class="form-inline login-form">
+        <a><button class="btn btn-action" type="button">Login</button></a>
+      </form>
+      <form class="form-inline signup-form">
+          <a href="applymembership.html"><button class="btn btn-action" type="button">Apply</button></a>
+      </form>
+    </nav>
+  <div class="content">
+
+
+
+        <div class="jumbotron jumbotron-fluid bg-cover jumbotron-welcome">
+          <div class="container jumbo-container">
+            <h1 class="welcome gen-text"><b>Welcome to the Quinnipiac Computing Club</h1>
+              <p class="gen-text">Code. Sleep. Repeat.</b></p>
+          </div>
+        </div>
+
+        <div class="inner-content-home">
+            <div class="caro-container">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ul>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" id="carouselText">
+
+                    <img src="images/caro0.jpg">
+                    <div class="carousel-caption highlight-box">
+                      <p>Our trip to Google NYC</p>
+                    </div>
+
+                  </div>
+                  <div class="carousel-item" id="carouselText">
+
+                    <img src="images/caro1.jpg">
+                    <div class="carousel-caption highlight-box">
+                      <p>Students working hard during a hackathon</p>
+                    </div>
+
+                  </div>
+                  <div class="carousel-item">
+
+                    <img src="images/caro2.png">
+                    <div class="carousel-caption highlight-box">
+                      <p>Hackathon particpants post-competition</p>
+                    </div>
+
+                  </div>
+                  <div class="carousel-item">
+
+                    <img src="images/caro3.jpg">
+                    <div class="carousel-caption highlight-box">
+                      <p>Professor & business professional judges</p>
+                    </div>
+
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="home-info info-box">
+
+              <div class="mission-div">
+                <h1 class="font-highlight">Our Mission</h1>
+                <p class="gen-text mission-text">The Quinnipiac Computing Club, or QCC, is the official club for those with a passion to code.
+                  We believe that programming is not only fun, but is a necessary part of the world we live in. Our mission is to get
+                  as many students as possible excited about the world of computing.</p>
+
+              </div>
+
+              <div class="seperate-line"> </div>
+
+              <div class="announcements-div">
+                <h1 class="font-highlight">Announcements</h1>
+                  <ul class="gen-text">
+                    <li>
+                      <p class="gen-text announcements-text">
+
+                      Our new website is live! Be sure to check it out and let us know of any feedback you might have</p>
+                    </li>
+                    <li>
+                      <p class="gen-text announcements-text">
+
+                      Our spring Hackathon is in need of a theme. Please contact us with any suggestions, and it just might be next semesters theme!</p>
+                    </li>
+                  </ul>
+              </div>
+
+              <div class="seperate-line"> </div>
+
+              <div class="become-member-div">
+                <button class="btn btn-action btn-become-member" ng-click="applyForMembership()">Become a member today!</button>
+              </div>
+
+
+
+            </div>
+          </div>
+
+          <div class="container gen-info">
+             <div class="row">
+               <div class="col-xs-12 ">
+                 <nav>
+                   <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">About Us</a>
+                     <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Goals</a>
+                     <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Meetings</a>
+                   </div>
+                 </nav>
+                 <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                     Our club began in 2015 when a group of students realized there was no real club for Software Engineers, Computer Scientists, Game Designers, or anyone with an interest in computing. Since then, we have been growing this club to where it is now.
+                     At a total of 92 members past and present, we are quickly growing into a larger and larger club.
+                     Every semester, we hold events like the Hackathon, which is an all day coding competition with cash prizes.
+                     We also run different programming challenges that test for accuracy and efficiency, while also having guest speakers and midterm/final study sessions.
+                     If any of this sounds interesting to you, please do no hesitate to become a member! It is free and only takes minutes.
+                   </div>
+                   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                     <p id="goals-text">The Quinnipiac Computing Club aims to achieve a certain amount of goals in order to uphold the standards we have placed on this club. It is important that members of the club understand these goals as well, as it is all of our responsibilities to ensure these goals are being met.
+                     They are as followed:</p>
+                     <ul>
+                       <li>
+                         Spread computing to as many students as possible
+                       </li>
+                       <li>
+                         Create a positive and fun atmosphere where students can get excited about programming
+                       </li>
+                       <li>
+                         Establish a community for fellow developers to share coding knowledge and learn from each other
+                       </li>
+                       <li>
+                         Provide real world applications for programming beyond classwork
+                       </li>
+                     </ul>
+                     If we can achieve on these goals, then the QCC will continue to be a positive club for Quinnipiac!
+                   </div>
+                   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                     <p class="meetings-text">
+                       The Quinnipiac Computing Club typically holds meetings when necessary, but there are monthly meetings that we hold for the duration of the semester. Officers are required to attend, and all members are invited to join us. We discuss upcoming events, potential theme ideas for hackathons, and always order food!
+                       The following meetings are as followed:
+                     </p>
+                     <ul>
+                       <li>
+                         Feburary 6th, 2019 @ 7pm in CCE-030
+                       </li>
+                       <li>
+                         March 6th, 2019 @ 7pm in CCE-030
+                       </li>
+                       <li>
+                         April 10th, 2019 @ 7pm in CCE-030
+                       </li>
+                     </ul>
+                   </div>
+
+                 </div>
+
+               </div>
+             </div>
+       </div>
+     </div>
+</div>
+
+        </div>
+
+
+
+
+
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <span><i class="far fa-copyright"></i>Quinnipiac Computing Club</span>
+      <a href="https://www.facebook.com/groups/QuinnipiacComputingClub/" class="fb-link"><i class="fab fa-facebook-square"></i>Join us on Facebook</a>
+  </footer>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <title>Quinnipiac Computing Club</title>
+  <link rel="shortcut icon" type="image/png" href="images/icon.png" />
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" height="35" class="d-inline-block align-top" alt="">
+      Quinnipiac Computing Club
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="career.html">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="events.html">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="officers.html">Officers<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="checklist.html">Checklist</a>
+        </li>
+      </ul>
+      <form class="form-inline login-form">
+        <a><button class="btn btn-action" type="button">Login</button></a>
+      </form>
+      <form class="form-inline signup-form">
+          <a href="applymembership.html"><button class="btn btn-action" type="button">Apply</button></a>
+      </form>
+  </nav>
+  <h1 class="titlebar gen-text event-header">Event Checklist</h1>
+
+  <div class="myContainer">
+    <div class="task__head task--row">YOUR TASKS (CLICK & HOLD TO REMOVE)</div>
+    <form action="">
+      <div class="task__list">
+        <label for="task--1" class="task"><input class="task__check" type="checkbox" id="task--1" />
+          <div class="task__field task--row">1. Choose Hack-a-thon topic<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+        </label>
+        <label for="task--2" class="task"><input class="task__check" type="checkbox" id="task--2" />
+          <div class="task__field task--row">2. Order food for hack-a-thon<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+        </label>
+        <label for="task--3" class="task"><input class="task__check" type="checkbox" id="task--3" />
+          <div class="task__field task--row">3. Create posters<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+        </label>
+        <label for="task--4" class="task"><input class="task__check" type="checkbox" id="task--4" />
+          <div class="task__field task--row">4. Hang posters around school<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+        </label>
+        <label for="task--4" class="task"><input class="task__check" type="checkbox" id="task--4" />
+          <div class="task__field task--row">5. Collect sign up sheets<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+        </label>
+        <label for="task--4" class="task"><input class="task__check" type="checkbox" id="task--4" />
+          <div class="task__field task--row">6. Gathers professors for event<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+        </label>
+      </div>
+      <div class="task--row task__footer">
+        <input class="task__add" type="text" value="+ Click here to add new task">
+      </div>
+    </form>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <span><i class="far fa-copyright"></i>Quinnipiac Computing Club</span>
+    <a href="https://www.facebook.com/groups/QuinnipiacComputingClub/" class="fb-link"><i class="fab fa-facebook-square"></i>Join us on Facebook</a>
+  </footer>
+  <script src="js/check.js"></script>
+
+</body>
+
+</html>

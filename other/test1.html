@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <title>Quinnipiac Computing Club</title>
+  <link rel="shortcut icon" type="image/png" href="images/icon.png" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" height="35" class="d-inline-block align-top" alt="">
+      Quinnipiac Computing Club
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="career.html">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="events.html">Events</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="officers.html">Officers<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="checklist.html">Checklist</a>
+        </li>
+      </ul>
+      <form class="form-inline login-form">
+        <a href="test.html"><button class="btn btn-action" type="button">Login</button></a>
+      </form>
+      <form class="form-inline signup-form">
+          <a href="applymembership.html"><button class="btn btn-action" type="button">Apply</button></a>
+      </form>
+  </nav>
+
+
+  <div class="card-body" id="manageOfficer">
+    <table class="table table" id="myTable">
+      <thead>
+        <tr>
+          <th scope="col" id="smallCol">Action</th>
+          <th scope="col" id="smallCol"></th>
+          <th scope="col" id="smallCol"></th>
+          <th scope="col">Officer</th>
+          <th scope="col">Email Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><i class="fas fa-plus"></i></th>
+          <th scope="row"><i class="fas fa-pencil-alt"></i></th>
+          <th scope="row"><i class="fas fa-trash-alt" id="trashIcon1"></i></th>
+          <td>David Lepore</td>
+          <td>David.Lepore@quinnipiac.edu</td>
+        </tr>
+        <tr>
+          <th scope="row"><i class="fas fa-plus"></i></th>
+          <th scope="row"><i class="fas fa-pencil-alt"></i></th>
+          <th scope="row"><i class="fas fa-trash-alt" id="trashIcon2"></i></th>
+          <td>Joseph White</td>
+          <td>Joseph.White@quinnipiac.edu</td>
+        </tr>
+        <tr>
+          <th scope="row"><i class="fas fa-plus"></i></th>
+          <th scope="row"><i class="fas fa-pencil-alt"></i></th>
+          <th scope="row"><i class="fas fa-trash-alt" id="trashIcon3"></i></th>
+          <td>Megan Forster</td>
+          <td>Megan.Forster@quinnipiac.edu</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <a><button class="btn btn-action" id="addMember" type="button" data-toggle="modal" data-target="#myModal">Add Member</button></a>
+
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header myModal">
+          <h4 class="modal-title" id="addNew">Add New Officer</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="contact-form" class="contact-form" action="" onSubmit="alert('Officer Has Been Added!')">Officer Name<br />
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name" required>
+            <br />Officer Email<br />
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required>
+            <br />
+            <label for="exampleFormControlFile1">Officer Photo</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            <div class="btn-submit-div">
+              <button class="btn btn-action" type="submit" role="button" id="submitBtn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span><i class="far fa-copyright"></i>Quinnipiac Computing Club</span>
+    <a href="https://www.facebook.com/groups/QuinnipiacComputingClub/" class="fb-link"><i class="fab fa-facebook-square"></i>Join us on Facebook</a>
+  </footer>
+  <script src="js/home.js"></script>
+
+</body>
+
+</html>

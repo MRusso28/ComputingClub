@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const port = 3000;
+const port = 8082;
 const app = express();
 var cors = require('cors');
+_ = require('underscore');
+
 require('./config/passport');
 
 var mongoose = require('mongoose');
@@ -19,6 +21,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.use(cors()) // Use this after the variable declaration
 
 app.use(bodyParser.json());
+app.use(express.static("../static"));
 
 const event_router = require("./routes/event_route.js");
 const student_router = require("./routes/student_route.js");
