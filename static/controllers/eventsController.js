@@ -15,8 +15,6 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
 
     $scope.toggleEventDesc = function(event){
 
-        console.log(event);
-
         var updatedEvent = {
             name: event.name,
             headline: event.headline,
@@ -48,4 +46,8 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
     $scope.$on('$viewContentLoaded', function() {
         $scope.loadEvents();
     });
+
+    $scope.goToAddEvent = function(){
+        $location.path("/addEvent");
+    }
 }]);
