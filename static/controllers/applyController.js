@@ -13,9 +13,9 @@ qccApp.controller("ApplyController", ["$scope", "$location", "$window", "Auth", 
         Auth.apply($scope.newUser)
         .then(function(result){
             console.log($window.sessionStorage["userInfo"]);
-        }, function(error){
-
-        });
+    }, function(error){
+        
+    });
 
         
     };

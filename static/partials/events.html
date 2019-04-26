@@ -39,7 +39,25 @@
     <div class="content">
       <h1 class="titlebar gen-text event-header">Events</h1>
 
-        <div class="jumbotron jumbotron-event hackathon">
+        <div class="jumbotron jumbotron-event hackathon" ng-repeat="event in events">
+          <div class="jumbo-content">
+            <h1 class="gen-text">{{event.name}}</h1>
+            <p class="lead gen-text">{{event.headline}}</p>
+            <p class="lead gen-text">
+              <a class="btn btn-action btn-lg" id="learn-more-hackathon" href="" role="button" ng-click="toggleEventDesc(event)">Learn More</a>
+            </p>
+
+          </div>
+          <div class="event-info gen-text event-detail-div" ng-show="{{event.showDesc}}">
+            <p class="event-text">
+              <b class="font-highlight">Date & Time: {{event.datetime}} {{event.location}}</b> <br />
+              {{event.desc}}
+            </p>
+          </div>
+        </div>
+
+
+        <!-- <div class="jumbotron jumbotron-event hackathon">
           <div class="jumbo-content">
             <h1 class="gen-text">Spring 2019 Hackathon</h1>
             <p class="lead gen-text">Compete head to head against other students in a one day coding competition</p>
@@ -80,7 +98,7 @@
               There will be plenty of food!
           </p>
         </div>
-      </div>
+      </div> -->
 
       <div class="row">
         <div class="div-manage-club-members">
@@ -93,6 +111,8 @@
     <script>
         $(function(){
           reload();
+          $('.event-detail-div').hide();
+          
         });
 
   </script>

@@ -21,4 +21,5 @@ function reload(){
           $('#checklist-tab').hide();
           $('#events-tab').hide();
         }
+
 }
