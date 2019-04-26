@@ -1,4 +1,4 @@
-qccApp.controller("IndexController", ["$scope", "$location", "$window", "Auth", function ($scope, $location, $window, Auth) {
+qccApp.controller("IndexController", ["$scope", "$location", "$window", "Auth",  function ($scope, $location, $window, Auth) {
     $scope.userInfo = null;
     $scope.applyForMembership = function(){
         $location.path("/apply");

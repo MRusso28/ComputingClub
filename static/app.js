@@ -9,6 +9,8 @@ qccApp.config(function ($routeProvider) {
         .when("/apply", {controller: "ApplyController", templateUrl: "partials/applyMembership.html"})
         .when("/login", {controller: "LoginController", templateUrl: "partials/login.html"})
         .when("/events", {controller: "EventsController", templateUrl: "partials/events.html"})
+        .when("/addEvent", {controller: "AddEventController", templateUrl: "partials/addEvent.html"})
+
         //.when("/checklist")
         // .when("/recipes/:recipe_id",  { controller: "ViewRecipeController", templateUrl: "app/partials/view_recipe.html" })
         // .when("/login", {
