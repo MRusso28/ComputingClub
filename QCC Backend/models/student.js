@@ -43,6 +43,8 @@ StudentSchema.methods.toAuthJSON = function() {
     _id: this._id,
     email: this.email,
     token: this.generateJWT(),
+    officer: this.officer,
+    approved: this.approved
   };
 };
 

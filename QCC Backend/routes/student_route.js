@@ -16,6 +16,7 @@ router.route("/students")
 
 //POST new user route (optional, everyone has access)
 router.post('/students/auth', auth.optional, (req, res, next) => {
+    console.log(req);
     const { body: { user } } = req;
   
     if(!user.email) {
@@ -41,6 +42,7 @@ router.post('/students/auth', auth.optional, (req, res, next) => {
     return finalUser.save()
       .then(() => res.json({ user: finalUser.toAuthJSON() }));
   });
+
   
   //POST login route (optional, everyone has access)
   router.post('/students/auth/login', auth.optional, (req, res, next) => {
@@ -70,7 +72,6 @@ router.post('/students/auth', auth.optional, (req, res, next) => {
       if(passportUser) {
         const user = passportUser;
         user.token = passportUser.generateJWT();
-  
         return res.json({ user: user.toAuthJSON() });
       }
   

@@ -35,20 +35,11 @@
   <div class="content">
 
     <div class="row">
-      <h1 class="gen-text" id="membershipH">Looking to apply for a membership? Just fill out the form below!</h1>
+      <h1 class="gen-text" id="membershipH">Login</h1>
     </div>
 
     <div class="container info-box" id="formContainer">
       <form>
-        <label for="exampleFormControlInput1" class="gen-text">Full Name</label>
-        <div class="row">
-          <div class="col">
-            <input type="text" class="form-control" placeholder="First name" id="firstname">
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Last name" id="lastname">
-          </div>
-        </div>
         <div class="form-group" id="padding">
           <label for="exampleFormControlInput1" class="gen-text">Email address</label>
           <input type="email" class="form-control" id="email" placeholder="name@example.com" >
@@ -58,39 +49,15 @@
             <label for="exampleFormControlInput1" class="gen-text">Password</label>
             <input type="password" class="form-control" placeholder="Password" id="password">
           </div>
-          <div class="col">
-            <label for="exampleFormControlInput1" class="gen-text">Graduation Year</label>
-            <input type="number" class="form-control" placeholder="2020" id="gradYear">
-          </div>
-        </div>
-        <div class="row">
-         <h2 class="gen-text" id="hearAboutUs">How did you hear about us?</h2>
-        </div>
-        <div class="row" id="checkrow">
-          <div class="row" id="middle">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label gen-text" for="inlineCheckbox1" >A Student</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label gen-text" for="inlineCheckbox2">A Professor</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
-                <label class="form-check-label gen-text" for="inlineCheckbox4">Other</label>
-              </div>
-          </div>
         </div>
         <div class="row" id="padding">
-          <button type="button" class="btn btn-primary" id="middle" ng-click="sendApplication()">Apply For Membership</button>
+          <button type="button" class="btn btn-primary" id="middle" ng-click="login()">Login</button>
 
         </div>
       </form>
     </div>
 
     </div>
-
     <script>
         $(function(){
           reload();

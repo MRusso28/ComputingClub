@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" height="35" class="d-inline-block align-top" alt="">
+      Quinnipiac Computing Club
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="career.html">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="events-tab" ng-click="goToEvents()">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="officers.html">Officers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="checklist.html" id="checklist-tab">Checklist</a>
+        </li>
+      </ul>
+      <form class="form-inline login-form">
+        <button class="btn btn-action" type="button" ng-click="login()" id="login-btn">Login</button>
+      </form>
+      <form class="form-inline signup-form">
+          <button class="btn btn-action" type="button" ng-click="applyForMembership()" id="apply-btn">Apply</button>
+          <button class="btn btn-action" type="button" ng-click="signout()" id="signout-btn">Sign Out</button>
+      </form>
+
+    </nav>
+
+
+    <div class="content">
+      <h1 class="titlebar gen-text event-header">Events</h1>
+
+        <div class="jumbotron jumbotron-event hackathon">
+          <div class="jumbo-content">
+            <h1 class="gen-text">Spring 2019 Hackathon</h1>
+            <p class="lead gen-text">Compete head to head against other students in a one day coding competition</p>
+            <p class="lead gen-text">
+              <a class="btn btn-action btn-lg" id="learn-more-hackathon" href="#" role="button">Learn More</a>
+            </p>
+
+          </div>
+          <div class="event-info gen-text hackathon-div">
+            <p class="event-text">
+              <b class="font-highlight">Date & Time: April 23rd, 10am-7pm, CCE-030</b> <br />
+
+                The Hackathon is an all day coding challenge where you have all day to program something surrounding a theme revealed the day of competition.
+                Teams can consist of 1-4 students.
+                Teams create presentations that show off what they made so that judges can pick the top 3 teams, all of which win cash prizes.
+                Teams can create websites, mobile apps, or desktop apps.
+            </p>
+          </div>
+        </div>
+
+
+      <div class="jumbotron jumbotron-event github">
+        <div class="jumbo-content">
+
+          <h1 class="gen-text">Github Tutorial</h1>
+          <p class="lead gen-text">Learn the basics as well as advanced Github tips and tricks</p>
+          <p class="lead gen-text">
+            <a class="btn btn-action btn-lg" id="learn-more-github" href="#" role="button">Learn more</a>
+          </p>
+        </div>
+
+        <div class="event-info gen-text github-div">
+          <p class="event-text">
+            <b class="font-highlight">Date & Time: March 11th, 7-8pm, CCE-030</b> <br />
+
+              Github and Git can be intimidating to learn. Luckily for us, we have a guest speaker who will be sharing with us his knowledge of the technology.
+              This speaker will cover information not only for beginners, but those who are advanced too. This is a great opportunity to improve your skills.
+              There will be plenty of food!
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="div-manage-club-members">
+          <button class="btn btn-action" id="addEventBtn" type="button">Add Event</button>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+        $(function(){
+          reload();
+        });
+
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <span><i class="far fa-copyright"></i>Quinnipiac Computing Club</span>
+      <a href="https://www.facebook.com/groups/QuinnipiacComputingClub/" class="fb-link"><i class="fab fa-facebook-square"></i>Join us on Facebook</a>
+  </footer>
