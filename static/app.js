@@ -10,6 +10,7 @@ qccApp.config(function ($routeProvider) {
         .when("/login", {controller: "LoginController", templateUrl: "partials/login.html"})
         .when("/events", {controller: "EventsController", templateUrl: "partials/events.html"})
         .when("/addEvent", {controller: "AddEventController", templateUrl: "partials/addEvent.html"})
+        .when("/addCareerResource", {controller: "AddCareerResourceController", templateUrl: "partials/addCareerResource.html"})
         .when("/careerResource", {controller: "CareerResourceController", templateUrl: "partials/careerResource.html"})
 
         //.when("/checklist")

@@ -58,13 +58,15 @@
   <div class="row">
     <div class="horiz-card">
       <div class="horiz-card-content horiz-card-shadow">
-        <div class="horiz-card-icon col-md-2 grey">
+
           <h4 class="not-gen-text">{{resource.name}}</h4>
           <p class="lead not-gen-text">{{resource.desc}}</p>
           <p class="lead not-gen-text">{{resource.link}}</p>
           <a ng-href="{{resource.link}}">link</a>
-        </div>
+
+
         <div class="horiz-card-header col-md-10 lime">
+          <button class="btn btn-action" type="button" ng-click="deleteResource()" id="signout-btn">Delete</button>
         </div>
         <div class="col-md-10">
         </div>
