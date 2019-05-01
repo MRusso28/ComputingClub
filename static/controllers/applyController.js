@@ -13,6 +13,7 @@ qccApp.controller("ApplyController", ["$scope", "$location", "$window", "Auth", 
         Auth.apply($scope.newUser)
         .then(function(result){
             console.log($window.sessionStorage["userInfo"]);
+            $location.path('/')
     }, function(error){
         
     });
