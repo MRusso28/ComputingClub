@@ -14,7 +14,4 @@ qccApp.controller("IndexController", ["$scope", "$location", "$window", "Auth", 
     $scope.goToEvents = function(){
         $location.path("/events");
     }
-    $scope.goToChecklist = function(){
-        $location.path("/checklist");
-    }
 }]);

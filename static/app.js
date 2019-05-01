@@ -2,7 +2,7 @@ var qccApp = angular.module("qccApp", ["ngRoute","ngResource"]);
 
 qccApp.config(function ($routeProvider) {
     $routeProvider
-        .when("/index",  { controller: "IndexController",
+        .when("/index",  { controller: "IndexController", 
                       templateUrl: "partials/index.html"
         })
         .when("/", {redirectTo: "/index"})
@@ -10,7 +10,6 @@ qccApp.config(function ($routeProvider) {
         .when("/login", {controller: "LoginController", templateUrl: "partials/login.html"})
         .when("/events", {controller: "EventsController", templateUrl: "partials/events.html"})
         .when("/addEvent", {controller: "AddEventController", templateUrl: "partials/addEvent.html"})
-        .when("/checklist", {controller: "ChecklistController", templateUrl: "partials/checklist.html"})
 
         //.when("/checklist")
         // .when("/recipes/:recipe_id",  { controller: "ViewRecipeController", templateUrl: "app/partials/view_recipe.html" })
@@ -33,12 +32,12 @@ qccApp.config(function ($routeProvider) {
 //     });
 // }]);
 /*
-var MyFancyObservable = require('MyFancyObservable');
+var MyFancyObservable = require('MyFancyObservable');  
 var observable = new MyFancyObservable();
 
-observable.on('hello', function (name) {
+observable.on('hello', function (name) {  
   console.log(name);
 });
 
-observable.hello('john');
+observable.hello('john');  
 */
