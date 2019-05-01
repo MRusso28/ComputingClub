@@ -5,21 +5,20 @@ function reload(){
           $('#signout-btn').show();
           $('#login-btn').hide();
           $('#apply-btn').hide();
-          if(!user.officer){
-            $('#checklist-tab').hide();
-          }else if(!user.approved){
-            $('#events-tab').hide();
-          }else{
-            $('#checklist-tab').show();
-            $('#events-tab').show();
+
+          if(user.officer){//officer
+
+          }else if(user.approved){//approved members
+
+          }else{//not approved members
+
     
           }
         }else{
           $('#signout-btn').hide();
           $('#login-btn').show();
           $('#apply-btn').show();
-          $('#checklist-tab').hide();
-          $('#events-tab').hide();
+
         }
 
 }

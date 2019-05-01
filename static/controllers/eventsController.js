@@ -1,5 +1,17 @@
 qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http", "Auth", function ($scope, $location, $window, $http, Auth) {
     
+    if(JSON.parse(sessionStorage.getItem("userInfo")) == null){
+        $scope.adminBtns = false;
+        $scope.approvedBtns = false;
+        $scope.loggedIn = false;
+        
+    }else{
+        $scope.adminBtns = JSON.parse(sessionStorage.getItem("userInfo")).officer;
+        $scope.approvedBtns = JSON.parse(sessionStorage.getItem("userInfo")).approved;
+        $scope.loggedIn = true;
+
+    }
+
     $scope.loadEvents = function(){
         $http.get("/events")
             .then(function (result) {
@@ -10,8 +22,23 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
                 console.log(error);
             });
 
+            $scope.adminBtns = JSON.parse(sessionStorage.getItem("userInfo")).officer;
+            $scope.approvedBtns = JSON.parse(sessionStorage.getItem("userInfo")).approved;
+            //console.log($scope.adminBtns);
+
         
     };
+
+    $scope.signout = function(){
+
+        Auth.signout().then(function(result){
+            $location.path("/");
+        }, 
+        function(err){
+            $location.path("/");
+        });
+        
+    }
 
     $scope.toggleEventDesc = function(event){
 
