@@ -46,7 +46,11 @@
             <p class="lead gen-text">
               <a class="btn btn-action btn-lg" id="learn-more-hackathon" href="" role="button" ng-click="toggleEventDesc(event)">Learn More</a>
             </p>
-            <i class="fas fa-edit fa-1x btn btn-action btn-lg" ng-show="adminBtns" ng-click="goToEditEvent(event)"></i>
+            <div class="edit-icon-div row">
+              <i class="fas fa-edit fa-1x btn btn-action btn-lg" ng-show="adminBtns" ng-click="editEvent(event)"></i>
+              <i class="fas fa-trash-alt btn btn-action btn-lg" ng-show="adminBtns" ng-click="deleteEvent(event)"></i>
+
+            </div>
 
           </div>
           <div class="event-info gen-text event-detail-div" ng-show="{{event.showDesc}}">

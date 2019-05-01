@@ -12,6 +12,8 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
 
     }
 
+    console.log('approved: ' + $scope.approvedBtns);
+
     $scope.loadEvents = function(){
         $http.get("/events")
             .then(function (result) {
@@ -29,6 +31,23 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
         
     };
 
+    $scope.editEvent = function(event){
+        sessionStorage.setItem("eventToChange", JSON.stringify(event));
+        $location.path("/modifyEvent");
+    };
+
+    $scope.deleteEvent = function(event){
+        $http.defaults.headers.delete = { "Content-Type": "application/json;charset=utf-8" };
+        console.log(event);
+        $http.delete("/events", {data: event})
+        .then(function(result){
+            console.log(result);
+            $scope.loadEvents();
+        }, function(error){
+            console.log(error);
+        });
+    };
+
     $scope.signout = function(){
 
         Auth.signout().then(function(result){
@@ -38,7 +57,7 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
             $location.path("/");
         });
         
-    }
+    };
 
     $scope.toggleEventDesc = function(event){
 

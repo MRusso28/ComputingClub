@@ -6,6 +6,7 @@ qccApp.config(function ($routeProvider) {
                       templateUrl: "partials/index.html"
         })
         .when("/", {redirectTo: "/index"})
+        .when("/modifyEvent", {controller: "ModifyEventController", templateUrl: "partials/modifyEvent.html"})
         .when("/apply", {controller: "ApplyController", templateUrl: "partials/applyMembership.html"})
         .when("/login", {controller: "LoginController", templateUrl: "partials/login.html"})
         .when("/events", {controller: "EventsController", templateUrl: "partials/events.html"})

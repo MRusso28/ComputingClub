@@ -41,7 +41,6 @@ body {
 
 .info-box {
   background: #073451;
-  darker blue
 }
 
 .highlight-box {
@@ -210,7 +209,6 @@ body {
 .gen-info {
   margin-top: 40px;
   background: #073451;
-  darker blue
 }
 
 .nav-item.nav-link.active {
@@ -757,4 +755,12 @@ h3{
   margin: auto;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.edit-icon-div{
+  margin-left: 0;
+}
+
+.fa-edit{
+  margin-right: 10px;
 }
