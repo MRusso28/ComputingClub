@@ -52,6 +52,9 @@ body {
 .gen-text {
   color: white;
 }
+.not-gen-text {
+  color: black;
+}
 
 .font-highlight {
   color: #d79e1d;
@@ -746,9 +749,6 @@ padding-top: 1.4rem;
   margin-bottom: .5%;
   margin-right: .5%;
 }
-h3{
-  color: white;
-}
 #careerImg{
   width:90%;
   height: auto;
@@ -757,4 +757,103 @@ h3{
   margin: auto;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+
+.lime {
+  color: #a5c653;
+}
+.lime-bg {
+  background: #a5c653;
+}
+.orange {
+  color: #f36c42;
+}
+.orange-bg {
+  background: #f36c42;
+}
+.cyan {
+  color: #58c5c7;
+}
+.cyan-bg {
+  background: #58c5c7;
+}
+.grey {
+    color: #bcbcbc;
+}
+#myContainer {
+  width: 1840px;
+  margin: 0 auto;
+  margin-top:100px;
+  margin-left: 18%;
+}
+.horiz-card {
+  display: inline-block;
+  height: 200px;
+  margin-bottom: 35px
+}
+.horiz-card .horiz-card-icon,
+.horiz-card .horiz-card-title,
+.horiz-card .horiz-card-content {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.horiz-card:hover .horiz-card-icon {
+  margin-left: 0px;
+}
+.horiz-card-title {
+  position: relative;
+  display:inline-block;
+  float:left;
+  width: 10px;
+  height:241px;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  z-index: -1;
+}
+.horiz-card-title h4{
+  color: transparent;
+  transform: rotate(270deg);
+  line-height:240px;
+}
+.horiz-card-content {
+  display: inline-block;
+  background: #fff;
+  height: 280px;
+  width: 1040px;
+  border-top: 2px solid #f7f7f7;
+  border-right: 2px solid #f7f7f7;
+  border-bottom: 2px solid #f7f7f7;
+  border-radius: 0 15px 15px 0;
+}
+.horiz-card-shadow {
+  position: relative;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.horiz-card-content: after {
+  content:'';
+    -webkit-box-shadow: 0 0 0 0 rgba(235,235,235,1);
+  -moz-box-shadow: 0 0 0 0 rgba(235,235,235,1);
+  box-shadow: 4px 4px 15px 12px rgba(235,235,235,1);
+}
+.horiz-card-content:hover + .horiz-card-title {
+  display:inline-block;
+  width:40px ;
+  z-index: 0;
+}
+.horiz-card-content:hover + .horiz-card-title h4 {
+  color: #fff;
+  -webkit-transition-delay: .2s; /* Safari */
+  transition-delay: .2s;
+}
+.horiz-card-icon {
+  width: 40px;
+  height: 100%;
+  font-size: 32px;
+  padding: 16px 8px 0 16px;
+}
+.horiz-card-header {
+  padding: 8px 0 0 16px
 }

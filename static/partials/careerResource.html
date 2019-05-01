@@ -39,15 +39,49 @@
     <div class="content">
       <h1 class="titlebar gen-text event-header">Career Resources</h1>
 
-        <div class="jumbotron jumbotron-event hackathon" ng-repeat="resource in resource">
+        <!-- <div class="jumbotron jumbotron-event hackathon" ng-repeat="resource in resource">
           <div class="jumbo-content">
             <h1 class="gen-text">{{resource.name}}</h1>
             <p class="lead gen-text">{{resource.link}}</p>
+            <a ng-href="{{resource.link}}">link</a>
+            <p class="lead gen-text">{{resource.desc}}</p>
             <p class="lead gen-text">
             </p>
 
           </div>
+        </div> -->
+
+
+
+
+<div class="container" id="myContainer" ng-repeat="resource in resource">
+  <div class="row">
+    <div class="horiz-card">
+      <div class="horiz-card-content horiz-card-shadow">
+        <div class="horiz-card-icon col-md-2 grey">
+          <h4 class="not-gen-text">{{resource.name}}</h4>
+          <p class="lead not-gen-text">{{resource.desc}}</p>
+          <p class="lead not-gen-text">{{resource.link}}</p>
+          <a ng-href="{{resource.link}}">link</a>
         </div>
+        <div class="horiz-card-header col-md-10 lime">
+        </div>
+        <div class="col-md-10">
+        </div>
+      </div>
+    <div class="horiz-card-title lime-bg">
+      <h4>Resource</h4>
+    </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
 
     </div>
 
