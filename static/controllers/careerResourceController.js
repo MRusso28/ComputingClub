@@ -1,5 +1,4 @@
 qccApp.controller("CareerResourceController", ["$scope", "$location", "$window", "$http", "Auth", function($scope, $location, $window, $http, Auth) {
-
   $scope.loadResources = function() {
     $http.get("/careerResource")
       .then(function(result) {
@@ -14,17 +13,17 @@ qccApp.controller("CareerResourceController", ["$scope", "$location", "$window",
   };
 
 
-  $scope.deleteResource = function() {
-    console.log("clicked btn")
-
-    $http.delete("/careerResource")
-      .then(function(result) {
+  $scope.deleteResource = function(resource){
+      $http.defaults.headers.delete = { "Content-Type": "application/json;charset=utf-8" };//NEED THIS
+      console.log(resource);
+      $http.delete("/careerResource", {data: resource})//NEED THIS FORMAT TOO
+      .then(function(result){
           console.log(result);
-        },
-        function(err) {
-          console.log(err);
-        });
-  }
+          $scope.loadResources();
+      }, function(error){
+          console.log(error);
+      });
+  };
 
   $scope.toggleResourceDesc = function(event) {
 
