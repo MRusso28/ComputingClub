@@ -1,16 +1,16 @@
 qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http", "Auth", function ($scope, $location, $window, $http, Auth) {
-    
+
     $scope.loadEvents = function(){
         $http.get("/events")
             .then(function (result) {
                 console.log(result.data);
                 $scope.events = result.data;
-                
+
             }, function (error) {
                 console.log(error);
             });
 
-        
+
     };
 
     $scope.toggleEventDesc = function(event){
@@ -35,7 +35,7 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
         .then(function (result) {
             console.log(result);
             $scope.loadEvents("/events");
-            
+
         }, function (error) {
             console.log(error);
         });
@@ -45,6 +45,7 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
 
     $scope.$on('$viewContentLoaded', function() {
         $scope.loadEvents();
+
     });
 
     $scope.goToAddEvent = function(){
