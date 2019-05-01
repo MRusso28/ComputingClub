@@ -35,15 +35,15 @@
 
     </nav>
 
-    <div class="myContainer">
-      <div class="task__head task--row" ng-repeat="checklist in checklist">{{checklist.title}}</div>
+    <div class="myContainer" ng-repeat="checklist in checklists">
+      <div class="task__head task--row">{{checklist.title}}</div>
       <form action="">
-        <div class="task__list" ng-repeat="tasks in checklist">
-          <label for="task--1" class="task"><input class="task__check" type="checkbox" id="task--1" />
-            <div ng-repeat="task in tasks">
-              <div class="task__field task--row">{{task}}<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
-            </div>
-          </label>
+        <div class="task__list">
+              <label for="task--1" class="task"><input class="task__check" type="checkbox" id="task--1" />
+                <div ng-repeat="task in checklist.tasks">
+                  <div class="task__field task--row">{{task}}<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+                </div>
+              </label>
         </div>
         <div class="task--row task__footer">
           <input class="task__add" type="text" value="+ Click here to add new task">

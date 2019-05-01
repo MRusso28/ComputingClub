@@ -4,7 +4,7 @@ qccApp.controller("ChecklistController", ["$scope", "$location", "$window", "$ht
         $http.get("/checklist")
             .then(function (result) {
                 console.log(result.data);
-                $scope.checklist = result.data;
+                $scope.checklists = result.data;
 
             }, function (error) {
                 console.log(error);
