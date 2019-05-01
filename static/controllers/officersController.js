@@ -4,7 +4,7 @@ qccApp.controller("OfficersController", ["$scope", "$location", "$window", "$htt
         $http.get("/students")
             .then(function (result) {
                 console.log(result.data);
-                $scope.officers = result.data;
+                $scope.students = result.data;
 
             }, function (error) {
                 console.log(error);
@@ -13,12 +13,12 @@ qccApp.controller("OfficersController", ["$scope", "$location", "$window", "$htt
 
     };
 
-    $scope.toggleOfficerDesc = function(event){
+    $scope.toggleSudentDesc = function(event){
 
-        var updatedOfficer = {
-            name: officer.name,
-            gradYear: officer.gradYear,
-            email: officer.email,
+        var updatedStudents = {
+            name: student.name,
+            gradYear: student.gradYear,
+            email: student.email,
 
         }
 

@@ -38,14 +38,14 @@
     </nav>
 
 <h1 class="titlebar gen-text event-header">Officers</h1>
-<div class="container" id="myContainer" ng-repeat="officer in officers" ng-if = "officer">
-  <div class="row">
+<div class="container" id="myContainer" ng-if = "student.officer == true" ng-repeat="student in students" >
+  <div class="row" >
     <div class="horiz-card">
       <div class="horiz-card-content horiz-card-shadow">
 
-          <h4 class="not-gen-text">{{officer.name}}</h4>
-          <p class="lead not-gen-text">Email: {{officer.email}}</p>
-          <p class="lead not-gen-text">Grad Year: {{officer.gradYear}}</p>
+          <h4 class="not-gen-text">{{student.name}}</h4>
+          <p class="lead not-gen-text">Email: {{student.email}}</p>
+          <p class="lead not-gen-text">Grad Year: {{student.gradYear}}</p>
 
         <div class="horiz-card-header col-md-10 lime">
         </div>
@@ -53,7 +53,7 @@
         </div>
       </div>
     <div class="horiz-card-title lime-bg">
-      <h4>Resource</h4>
+      <h4>Officer</h4>
     </div>
     </div>
   </div>
