@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" height="35" class="d-inline-block align-top" alt="">
+      Quinnipiac Computing Club
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="career.html">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="events-tab" ng-click="goToEvents()">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="officers.html">Officers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="checklist-tab" ng-click="goToChecklist()">Checklist</a>
+        </li>
+      </ul>
+      <form class="form-inline login-form">
+        <button class="btn btn-action" type="button" ng-click="login()" id="login-btn">Login</button>
+      </form>
+      <form class="form-inline signup-form">
+          <button class="btn btn-action" type="button" ng-click="applyForMembership()" id="apply-btn">Apply</button>
+          <button class="btn btn-action" type="button" ng-click="signout()" id="signout-btn">Sign Out</button>
+      </form>
+
+    </nav>
+
+    <div class="myContainer">
+      <div class="task__head task--row" ng-repeat="checklist in checklist">{{checklist.title}}</div>
+      <form action="">
+        <div class="task__list" ng-repeat="tasks in checklist">
+          <label for="task--1" class="task"><input class="task__check" type="checkbox" id="task--1" />
+            <div ng-repeat="task in tasks">
+              <div class="task__field task--row">{{task}}<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+            </div>
+          </label>
+        </div>
+        <div class="task--row task__footer">
+          <input class="task__add" type="text" value="+ Click here to add new task">
+        </div>
+      </form>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <span><i class="far fa-copyright"></i>Quinnipiac Computing Club</span>
+      <a href="https://www.facebook.com/groups/QuinnipiacComputingClub/" class="fb-link"><i class="fab fa-facebook-square"></i>Join us on Facebook</a>
+    </footer>
+    <script src="js/check.js"></script>
