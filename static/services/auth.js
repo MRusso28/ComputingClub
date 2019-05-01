@@ -57,11 +57,11 @@ qccApp.factory("Auth", ["$http","$q","$window", function ($http, $q, $window) {
             }
         }).then(function (result) {
             userInfo = null;
-            $window.sessionStorage["userInfo"] = null;
+            sessionStorage.clear();
             deferred.resolve(result);
         }, function (error) {
             userInfo = null;
-            $window.sessionStorage["userInfo"] = null;
+            sessionStorage.clear();
             deferred.reject(error);
         });
 
