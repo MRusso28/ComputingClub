@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const career_controller = require("../controllers/career_resource_controller.js");
 
-router.route("/careers")
+router.route("/careerResource")
 .all((req,res,next)=>{
     next();
 })
