@@ -1,4 +1,5 @@
 qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http", "Auth", function ($scope, $location, $window, $http, Auth) {
+
     
     if(JSON.parse(sessionStorage.getItem("userInfo")) == null){
         $scope.adminBtns = false;
@@ -14,15 +15,17 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
 
     console.log('approved: ' + $scope.approvedBtns);
 
+
     $scope.loadEvents = function(){
         $http.get("/events")
             .then(function (result) {
                 console.log(result.data);
                 $scope.events = result.data;
-                
+
             }, function (error) {
                 console.log(error);
             });
+
 
             $scope.adminBtns = JSON.parse(sessionStorage.getItem("userInfo")).officer;
             $scope.approvedBtns = JSON.parse(sessionStorage.getItem("userInfo")).approved;
@@ -57,6 +60,7 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
             $location.path("/");
         });
         
+
     };
 
     $scope.toggleEventDesc = function(event){
@@ -81,7 +85,7 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
         .then(function (result) {
             console.log(result);
             $scope.loadEvents("/events");
-            
+
         }, function (error) {
             console.log(error);
         });
@@ -91,6 +95,7 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
 
     $scope.$on('$viewContentLoaded', function() {
         $scope.loadEvents();
+
     });
 
     $scope.goToAddEvent = function(){

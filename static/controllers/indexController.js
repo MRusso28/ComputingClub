@@ -34,8 +34,16 @@ qccApp.controller("IndexController", ["$scope", "$location", "$window", "Auth", 
     };
     $scope.goToEvents = function(){
         $location.path("/events");
+
     };
     $scope.$on('$viewContentLoaded', function() {
         $scope.load();
     });
 }]);
+
+    }
+    $scope.goToChecklist = function(){
+        $location.path("/checklist");
+    }
+}]);
+
