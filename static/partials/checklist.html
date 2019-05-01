@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" ng-click="goToIndex()">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="career.html">Career</a>
@@ -32,21 +32,26 @@
           <button class="btn btn-action" type="button" ng-click="applyForMembership()" id="apply-btn">Apply</button>
           <button class="btn btn-action" type="button" ng-click="signout()" id="signout-btn">Sign Out</button>
       </form>
-
     </nav>
 
+    <div class="row">
+      <button class="btn btn-action" id="addChecklistBtn" type="button" ng-click="goToAddChecklist()">Add New Checklist</button>
+    </div>
     <div class="myContainer" ng-repeat="checklist in checklists">
-      <div class="task__head task--row">{{checklist.title}}</div>
+      <div class="task__head task--row" id="checklistTitle">{{checklist.title}}</div>
       <form action="">
         <div class="task__list">
-              <label for="task--1" class="task"><input class="task__check" type="checkbox" id="task--1" />
-                <div ng-repeat="task in checklist.tasks">
-                  <div class="task__field task--row">{{task}}<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
-                </div>
-              </label>
+          <label for="task--1" class="task"><input class="task__check" type="checkbox" id="task--1" />
+            <div ng-repeat="task in checklist.tasks">
+              <div class="task__field task--row" id="checklistTasks">{{task}}<button class="task__important"><i class="fa fa-check" aria-hidden="true"></i></button></div>
+            </div>
+          </label>
         </div>
         <div class="task--row task__footer">
-          <input class="task__add" type="text" value="+ Click here to add new task">
+          <button class="task__add" value="Edit Checklist" type="button" ng-click=""> Edit Checklist </button>
+        </div>
+        <div class="task--row task__footerDelete">
+          <button class="task__delete" value="Delete Checklist" type="button" ng-click="deleteChecklist()"> Delete Checklist </button>
         </div>
       </form>
     </div>

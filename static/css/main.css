@@ -516,7 +516,8 @@ input {
 
 .myContainer {
   width: 600px;
-  margin: 100px auto;
+  margin: auto;
+  margin-top: 20px;
   box-shadow: 0 0 2px hsla(0, 0%, 0%, 0.2);
   border-radius: 6px;
   background-color: #f8f8f8;
@@ -558,6 +559,14 @@ input {
 
 .task__footer {
   transition: all 0.2s cubic-bezier(.7, .2, .17, 1);
+  background: #A9A9A9;
+  color: #d79e1d;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.task__footerDelete {
+  transition: all 0.2s cubic-bezier(.7, .2, .17, 1);
   background: #031826;
   color: #d79e1d;
   border-bottom-left-radius: 6px;
@@ -565,6 +574,14 @@ input {
 }
 
 .task__add {
+  height: 50px;
+  border: 0;
+  background: none;
+  width: 100%;
+  color: #031826;
+}
+
+.task__delete {
   height: 50px;
   border: 0;
   background: none;
@@ -580,6 +597,16 @@ input {
   color: #031826 !important;
   background-color: #d79e1d;
 }
+
+.task__delete:hover {
+  color: #000000 !important;
+}
+
+.task__footerDelete:hover {
+  color: #031826 !important;
+  background-color: #FF0000;
+}
+
 
 .task {
   overflow: hidden;
@@ -757,6 +784,7 @@ h3{
   margin-right: 10%;
 }
 
+<<<<<<< Updated upstream
 .edit-icon-div{
   margin-left: 0;
 }
@@ -764,3 +792,8 @@ h3{
 .fa-edit{
   margin-right: 10px;
 }
+=======
+#addChecklistbtn{
+  margin: auto;
+}
+>>>>>>> Stashed changes
