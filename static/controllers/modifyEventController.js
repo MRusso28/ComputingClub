@@ -1,4 +1,4 @@
-qccApp.controller("AddEventController", ["$scope", "$location", "$window", "$http", function ($scope, $location, $window, $http) {
+qccApp.controller("ModifyEventController", ["$scope", "$location", "$window", "$http", function ($scope, $location, $window, $http) {
     
     if(JSON.parse(sessionStorage.getItem("userInfo")) == null){
         $scope.adminBtns = false;
@@ -12,22 +12,37 @@ qccApp.controller("AddEventController", ["$scope", "$location", "$window", "$htt
 
     }
 
-    $scope.addEvent = function(){
-        var event = {
+    var event = JSON.parse(sessionStorage.getItem("eventToChange"));
+    $('#eventname').val(event.name);
+    $('#headline').val(event.headline);
+    $('#desc').val(event.desc);
+    $('#datetime').val(event.datetime);
+    $('#location').val(event.location);
+
+    $scope.updateEvent = function(){
+        var updatedEvent = {
             name: $('#eventname').val(),
             headline: $('#headline').val(),
             desc: $('#desc').val(),
             datetime: $('#datetime').val(),
             location: $('#location').val(),
             showDesc: false
-        };
-        
-        $http.post("/events", event)
+        }
+
+        var data = {
+            searchCriteria: event,
+            newData: updatedEvent
+        }
+
+        $http.put("/events", data)
         .then(function(result){
             console.log(result);
-        }, 
-        function(err){
-            console.log(err);
+            $location.path("/events");
+        }, function(err){
+            console.log(error);
         });
     }
+
+
+    
 }]);
