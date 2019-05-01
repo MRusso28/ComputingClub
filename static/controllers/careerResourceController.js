@@ -1,4 +1,20 @@
 qccApp.controller("CareerResourceController", ["$scope", "$location", "$window", "$http", "Auth", function($scope, $location, $window, $http, Auth) {
+
+  if(JSON.parse(sessionStorage.getItem("userInfo")) == null){
+      $scope.adminBtns = false;
+      $scope.approvedBtns = false;
+      $scope.loggedIn = false;
+
+  }else{
+      $scope.adminBtns = JSON.parse(sessionStorage.getItem("userInfo")).officer;
+      $scope.approvedBtns = JSON.parse(sessionStorage.getItem("userInfo")).approved;
+      $scope.loggedIn = true;
+
+  }
+
+  console.log('approved: ' + $scope.approvedBtns);
+
+
   $scope.loadResources = function() {
     $http.get("/careerResource")
       .then(function(result) {
@@ -11,6 +27,11 @@ qccApp.controller("CareerResourceController", ["$scope", "$location", "$window",
 
 
   };
+
+  $scope.updateResource = function(resource){
+    sessionStorage.setItem("resourceToChange", JSON.stringify(resource));
+    $location.path("/modifyCareerResource");
+};
 
 
   $scope.deleteResource = function(resource){
