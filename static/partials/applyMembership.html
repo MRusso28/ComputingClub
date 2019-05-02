@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" href="index.html">
+  <a class="navbar-brand" href="/#/index">
     <img src="images/logo.png" height="35" class="d-inline-block align-top" alt="">
     Quinnipiac Computing Club
   </a>
@@ -47,43 +47,43 @@
         <label for="exampleFormControlInput1" class="gen-text">Full Name</label>
         <div class="row">
           <div class="col">
-            <input ng-model="apply.name" ng-class="{ 'is-invalid' : userForm.name.$error.required && !userForm.name.$pristine }" 
+            <input ng-model="apply.name" ng-class="{ 'is-invalid' : userForm.name.$error.required && !userForm.name.$pristine }"
             type="text" class="form-control" placeholder="First name" id="name" name="name" required>
             <div ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block invalid-feedback">Please enter first name</div>
           </div>
           <div class="col">
-              <input ng-model="apply.lastname" ng-class="{ 'is-invalid' : userForm.lastname.$error.required && !userForm.lastname.$pristine }" 
+              <input ng-model="apply.lastname" ng-class="{ 'is-invalid' : userForm.lastname.$error.required && !userForm.lastname.$pristine }"
               type="text" class="form-control" placeholder="Last name" id="lastname" name="lastname" required>
               <div ng-show="userForm.lastname.$invalid && !userForm.lastname.$pristine" class="help-block invalid-feedback">Please enter last name</div>
           </div>
         </div>
         <div class="form-group" id="padding">
             <label for="exampleFormControlInput1" class="gen-text">Email</label>
-            <input ng-model="apply.email" ng-class="{ 'is-invalid' : userForm.email.$error.required && !userForm.email.$pristine }" 
+            <input ng-model="apply.email" ng-class="{ 'is-invalid' : userForm.email.$error.required && !userForm.email.$pristine }"
             type="email" class="form-control" placeholder="example@email.com" id="email" name="email" required>
             <div ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block invalid-feedback">Please enter email address</div>
         </div>
         <div class="row">
           <div class="col">
             <label for="exampleFormControlInput1" class="gen-text">Password</label>
-            <input ng-model="apply.password" ng-class="{ 'is-invalid' : userForm.password.$error.required && !userForm.password.$pristine }" 
+            <input ng-model="apply.password" ng-class="{ 'is-invalid' : userForm.password.$error.required && !userForm.password.$pristine }"
             type="password" class="form-control" placeholder="Password" id="password" name="password" required>
             <div ng-show="userForm.password.$invalid && !userForm.password.$pristine" class="help-block invalid-feedback">Please enter password</div>
           </div>
           <div class="col">
             <label for="exampleFormControlInput1" class="gen-text">Graduation Year</label>
-            <input ng-model="apply.gradYear" ng-class="{ 'is-invalid' : userForm.gradYear.$error.required && !userForm.gradYear.$pristine }" 
+            <input ng-model="apply.gradYear" ng-class="{ 'is-invalid' : userForm.gradYear.$error.required && !userForm.gradYear.$pristine }"
             type="number" class="form-control" id="gradYear" name="gradYear" value="2020" required>
             <div ng-show="userForm.gradYear.$invalid && !userForm.gradYear.$pristine" class="help-block invalid-feedback">Please enter graduation year</div>
           </div>
         </div>
-        
+
         <div class="row" id="padding">
           <button type="button" class="btn btn-primary" id="middle" ng-click="sendApplication()" ng-disabled="userForm.$invalid">Apply For Membership</button>
 
         </div>
       </form>
-      
+
     </div>
 
 
