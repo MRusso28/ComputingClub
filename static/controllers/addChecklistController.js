@@ -15,6 +15,7 @@ qccApp.controller("AddChecklistController", ["$scope", "$location", "$window", "
         $http.post("/checklist", checklist)
         .then(function(result){
             console.log(result);
+            $location.path('/checklist');
         },
         function(err){
             console.log(err);

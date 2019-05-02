@@ -2,8 +2,15 @@ qccApp.controller("UpdateChecklistController", ["$scope", "$location", "$window"
 
     var checklist = JSON.parse(sessionStorage.getItem("checklistToChange"));
     console.log(checklist);
-    $('#checklistName').val(checklist.title);
-    $('#checklistTasks').val(checklist.tasks.join(', '));
+    $scope.name = checklist.title
+    $scope.tasks = '';
+
+    for(var i = 0; i < checklist.tasks.length; i++){
+      $scope.tasks += checklist.tasks[i] + ', ';
+      
+
+    }
+
 
     if(checklist.completed == false){
       var complete = "false";
@@ -17,15 +24,17 @@ qccApp.controller("UpdateChecklistController", ["$scope", "$location", "$window"
         alert("Please make sure all parts filled out!");
         $location.reload();
       } else {
-      var tasksText = $('#checklistTasks').val().split(', ');
+      var tasksText = $scope.tasks.split(', ');
       var updatedChecklist = {
-          title: $('#checklistName').val(),
+          title: $scope.name,
           tasks: tasksText,
           completed: $('#complete').val()
       };
 
+      console.log($scope.name + "------");
+
       var data = {
-        searchCriteria: checklist.title,
+        searchCriteria: checklist,
         newData: updatedChecklist
       }
 

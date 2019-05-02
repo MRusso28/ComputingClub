@@ -43,26 +43,26 @@
         <div class="row">
           <div class="col">
             <label for="exampleFormControlInput1" class="gen-text" >Name</label>
-            <input  name="name" type="text" class="form-control" placeholder="Checklist name" id="checklistName" required>
-            <div ng-show="checklistFormUpdate.name.$invalid && !checklistFormUpdate.name.$pristine" class="help-block invalid-feedback">Please enter checklist name</div>
+            <input  name="checklistName" type="text" class="form-control" placeholder="Checklist name" id="checklistName" ng-model="name" required>
+            <div ng-show="checklistFormUpdate.checklistName.$invalid && !checklistFormUpdate.checklistName.$pristine" class="help-block invalid-feedback" ng-model="doesntmatter">Please enter checklist name</div>
           </div>
         </div>
         <div class="form-group" id="padding">
           <label for="exampleFormControlInput1" class="gen-text">Tasks</label>
-          <textarea name="tasks" ng-model="update.tasks" ng-class="{ 'is-invalid' : checklistFormUpdate.tasks.$error.required && !checklistFormUpdate.tasks.$pristine }" type="text" class="form-control" placeholder="List all tasks for the checklist separated with a semi-colon (Ex: Get plates; Get forks; Get food)" id="checklistTasks" required></textarea>
+          <textarea name="tasks" ng-model="tasks" ng-class="{ 'is-invalid' : checklistFormUpdate.tasks.$error.required && !checklistFormUpdate.tasks.$pristine }" type="text" class="form-control"  id="checklistTasks" required></textarea>
           <div ng-show="checklistFormUpdate.tasks.$invalid && !checklistFormUpdate.tasks.$pristine" class="help-block invalid-feedback">Please enter tasks, separated with a comma</div>
         </div>
         <div class="row">
           <div class="col">
             <label for="exampleFormControlInput1" class="gen-text">Tasks Complete?</label>
-            <select class="form-control form-control-sm" id="complete">
+            <select class="form-control form-control-sm" id="complete" >
               <option value="true">Yes</option>
               <option value="false">No</option>
             </select>
           </div>
         </div>
         <div class="row" id="padding">
-          <button type="button" class="btn btn-primary" id="middle" ng-click="updateChecklist()">Create Checklist</button>
+          <button type="button" class="btn btn-primary" id="middle" ng-click="updateChecklist()">Update Checklist</button>
         </div>
       </form>
     </div>
