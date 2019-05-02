@@ -39,16 +39,18 @@
     </div>
 
     <div class="container info-box" id="formContainer">
-      <form>
+      <form name="userForm">
         <div class="row">
           <div class="col">
             <label for="exampleFormControlInput1" class="gen-text" >Name</label>
-            <input type="text" class="form-control" placeholder="Checklist name" id="checklistname">
+            <input ng-model="new.name" ng-class="{ 'is-invalid' : userForm.name.$error.required && !userForm.name.$pristine }" type="text" class="form-control" placeholder="Checklist name" id="checklistname" name="name" required>
+            <div ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block invalid-feedback">Please enter checklist name</div>
           </div>
         </div>
         <div class="form-group" id="padding">
           <label for="exampleFormControlInput1" class="gen-text">Tasks</label>
-          <textarea type="text" class="form-control" placeholder="List all tasks for the checklist separated with a comma (Ex: Get plates, Get forks, Get food)" id="checklistTasks"></textarea>
+          <textarea name="tasks" ng-model="new.tasks" ng-class="{ 'is-invalid' : userForm.tasks.$error.required && !userForm.tasks.$pristine }" type="text" class="form-control" placeholder="List all tasks for the checklist separated with a comma (Ex: Get plates, Get forks, Get food)" id="checklistTasks" required></textarea>
+          <div ng-show="userForm.tasks.$invalid && !userForm.tasks.$pristine" class="help-block invalid-feedback">Please enter tasks, separated with a comma</div>
         </div>
 <!--
         <div class="row">

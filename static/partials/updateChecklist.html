@@ -39,20 +39,22 @@
     </div>
 
     <div class="container info-box" id="formContainer">
-      <form>
+      <form name="checklistFormUpdate">
         <div class="row">
           <div class="col">
             <label for="exampleFormControlInput1" class="gen-text" >Name</label>
-            <input type="text" class="form-control" placeholder="Checklist name" id="checklistName">
+            <input  name="name" type="text" class="form-control" placeholder="Checklist name" id="checklistName" required>
+            <div ng-show="checklistFormUpdate.name.$invalid && !checklistFormUpdate.name.$pristine" class="help-block invalid-feedback">Please enter checklist name</div>
           </div>
         </div>
         <div class="form-group" id="padding">
           <label for="exampleFormControlInput1" class="gen-text">Tasks</label>
-          <textarea type="text" class="form-control" placeholder="List all tasks for the checklist separated with a semi-colon (Ex: Get plates; Get forks; Get food)" id="checklistTasks"></textarea>
+          <textarea name="tasks" ng-model="update.tasks" ng-class="{ 'is-invalid' : checklistFormUpdate.tasks.$error.required && !checklistFormUpdate.tasks.$pristine }" type="text" class="form-control" placeholder="List all tasks for the checklist separated with a semi-colon (Ex: Get plates; Get forks; Get food)" id="checklistTasks" required></textarea>
+          <div ng-show="checklistFormUpdate.tasks.$invalid && !checklistFormUpdate.tasks.$pristine" class="help-block invalid-feedback">Please enter tasks, separated with a comma</div>
         </div>
         <div class="row">
           <div class="col">
-            <label for="exampleFormControlInput1" class="gen-text" >Tasks Complete?</label>
+            <label for="exampleFormControlInput1" class="gen-text">Tasks Complete?</label>
             <select class="form-control form-control-sm" id="complete">
               <option value="true">Yes</option>
               <option value="false">No</option>

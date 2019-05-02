@@ -1,6 +1,10 @@
 qccApp.controller("AddChecklistController", ["$scope", "$location", "$window", "$http", function ($scope, $location, $window, $http) {
 
     $scope.addChecklist = function(){
+      if ($('#checklistname').val() == '' || $('#checklistTasks').val() == '') {
+        alert("Please make sure all parts filled out!")
+        $location.reload();
+      } else {
         var tasksText = $('#checklistTasks').val().split(', ');
         console.log(tasksText);
         var checklist = {
@@ -16,6 +20,7 @@ qccApp.controller("AddChecklistController", ["$scope", "$location", "$window", "
             console.log(err);
         });
     }
+}
 
     $scope.goToChecklist = function(){
         $location.path("/checklist");
