@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" height="35" class="d-inline-block align-top" alt="">
+      Quinnipiac Computing Club
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/#/index">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#/careerResource">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="events-tab" href="/#/events">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  href="/#/officers">Officers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#/checklist" id="checklist-tab">Checklist</a>
+        </li>
+      </ul>
+      <form class="form-inline login-form">
+        <button class="btn btn-action" type="button" ng-click="login()" id="login-btn">Login</button>
+      </form>
+      <form class="form-inline signup-form">
+
+          <button class="btn btn-action" type="button" ng-click="applyForMembership()" id="apply-btn">Apply</button>
+          <button class="btn btn-action" type="button" ng-click="signout()" id="signout-btn">Sign Out</button>
+
+      </form>
+
+    </nav>
+
+<h1 class="titlebar gen-text event-header">Officers</h1>
+<div class="container" id="myContainer" ng-if = "student.officer == true" ng-repeat="student in students" >
+  <div class="row" >
+    <div class="horiz-card">
+      <div class="horiz-card-content horiz-card-shadow">
+
+          <h4 class="not-gen-text">{{student.name}}</h4>
+          <p class="lead not-gen-text">Email: {{student.email}}</p>
+          <p class="lead not-gen-text">Grad Year: {{student.gradYear}}</p>
+
+        <div class="horiz-card-header col-md-10 lime">
+        </div>
+        <div class="col-md-10">
+        </div>
+      </div>
+    <div class="horiz-card-title lime-bg">
+      <h4>Officer</h4>
+    </div>
+    </div>
+  </div>
+
+    <script>
+        $(function(){
+          reload();
+          $('.event-detail-div').hide();
+
+        });
+
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <span><i class="far fa-copyright"></i>Quinnipiac Computing Club</span>
+      <a href="https://www.facebook.com/groups/QuinnipiacComputingClub/" class="fb-link"><i class="fab fa-facebook-square"></i>Join us on Facebook</a>
+  </footer>

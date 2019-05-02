@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" height="35" class="d-inline-block align-top" alt="">
+      Quinnipiac Computing Club
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/#/index">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#/careerResource">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="events-tab" href="/#/events">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  href="/#/officers">Officers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#/checklist" id="checklist-tab">Checklist</a>
+        </li>
+      </ul>
+      <form class="form-inline login-form">
+        <button class="btn btn-action" type="button" ng-click="login()" id="login-btn">Login</button>
+      </form>
+      <form class="form-inline signup-form">
+
+          <button class="btn btn-action" type="button" ng-click="applyForMembership()" id="apply-btn">Apply</button>
+          <button class="btn btn-action" type="button" ng-click="signout()" id="signout-btn">Sign Out</button>
+
+        </form>
+
+    </nav>
+    <div class="content">
+
+      <div class="row">
+        <h1 class="gen-text" id="membershipH">Add a new career resource here!</h1>
+      </div>
+
+      <div class="container info-box" id="formContainer">
+        <form name="userForm" ng-submit="" novalidate>
+          <label for="exampleFormControlInput1" class="gen-text">Resource Name</label>
+          <div class="row">
+            <div class="col">
+              <input ng-model="apply.name" ng-class="{ 'is-invalid' : userForm.name.$error.required && !userForm.name.$pristine }"
+              type="text" class="form-control" placeholder="Resource Name" id="resourcename" name="name" required>
+              <div ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block invalid-feedback">Please enter resource name</div>
+            </div>
+            <div class="col">
+                <input ng-model="apply.link" ng-class="{ 'is-invalid' : userForm.link.$error.required && !userForm.link.$pristine }"
+                type="text" class="form-control" placeholder="Link" id="link" name="link" required>
+                <div ng-show="userForm.link.$invalid && !userForm.link.$pristine" class="help-block invalid-feedback">Please enter link</div>
+            </div>
+          </div>
+          <div class="form-group" id="padding">
+              <label for="exampleFormControlInput1" class="gen-text">Description</label>
+              <input ng-model="apply.desc" ng-class="{ 'is-invalid' : userForm.desc.$error.required && !userForm.desc.$pristine }"
+              type="text" class="form-control" placeholder="Description" id="desc" name="desc" required>
+              <div ng-show="userForm.desc.$invalid && !userForm.desc.$pristine" class="help-block invalid-feedback">Please enter description</div>
+          </div>
+
+
+          <div class="row" id="padding">
+            <button type="button" class="btn btn-primary" id="middle" ng-click="addResource()" ng-disabled="userForm.$invalid">Add Resource</button>
+
+          </div>
+        </form>
+    </div>
+
+    </div>
+
+    <script>
+        $(function(){
+          reload();
+        });
+
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <span><i class="far fa-copyright"></i>Quinnipiac Computing Club</span>
+      <a href="https://www.facebook.com/groups/QuinnipiacComputingClub/" class="fb-link"><i class="fab fa-facebook-square"></i>Join us on Facebook</a>
+  </footer>
