@@ -41,7 +41,7 @@
         <div class="jumbotron jumbotron-fluid bg-cover jumbotron-welcome">
           <div class="container jumbo-container">
             <h1 class="welcome gen-text"><b>Welcome to the Quinnipiac Computing Club</h1>
-              <p class="gen-text">Code. Sleep. Repeat.</b></p>
+              <p class="gen-text">Code. Sleep. Repeat.</p>
           </div>
         </div>
 
@@ -142,20 +142,19 @@
                <div class="col-xs-12 ">
                  <nav>
                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">About Us</a>
-                     <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Goals</a>
-                     <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Meetings</a>
+                     <h1 id="notATab">About Us</h1>
                    </div>
                  </nav>
                  <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                   <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="nav-home-tab" id="goals-text">
                      Our club began in 2015 when a group of students realized there was no real club for Software Engineers, Computer Scientists, Game Designers, or anyone with an interest in computing. Since then, we have been growing this club to where it is now.
                      At a total of 92 members past and present, we are quickly growing into a larger and larger club.
                      Every semester, we hold events like the Hackathon, which is an all day coding competition with cash prizes.
                      We also run different programming challenges that test for accuracy and efficiency, while also having guest speakers and midterm/final study sessions.
                      If any of this sounds interesting to you, please do no hesitate to become a member! It is free and only takes minutes.
                    </div>
-                   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                     <h1 id="alsoNotATab">Goals</h1>
                      <p id="goals-text">The Quinnipiac Computing Club aims to achieve a certain amount of goals in order to uphold the standards we have placed on this club. It is important that members of the club understand these goals as well, as it is all of our responsibilities to ensure these goals are being met.
                      They are as followed:</p>
                      <ul>
@@ -172,10 +171,10 @@
                          Provide real world applications for programming beyond classwork
                        </li>
                      </ul>
-                     If we can achieve on these goals, then the QCC will continue to be a positive club for Quinnipiac!
                    </div>
-                   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                     <p class="meetings-text">
+                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                     <h1 id="alsoNotATab">Meetings</h1>
+                     <p class="meetings-text" id="goals-text">
                        The Quinnipiac Computing Club typically holds meetings when necessary, but there are monthly meetings that we hold for the duration of the semester. Officers are required to attend, and all members are invited to join us. We discuss upcoming events, potential theme ideas for hackathons, and always order food!
                        The following meetings are as followed:
                      </p>
@@ -191,6 +190,8 @@
                        </li>
                      </ul>
                    </div>
+                   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                   </div>
 
                  </div>
 
@@ -203,7 +204,7 @@
         </div>
 
 
-  
+
 
 
 

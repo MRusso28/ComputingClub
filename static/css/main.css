@@ -236,6 +236,8 @@ body {
 
 #goals-text, #meetings-text {
   margin-bottom: 10px;
+  font-style: normal;
+  font-weight: lighter;
 }
 
 /*Events styling*/
@@ -928,4 +930,10 @@ padding-top: 1.4rem;
 }
 #myContainer{
   margin-left: 400px;
+}
+#notATab{
+  color: white;
+}
+#alsoNotATab{
+  margin-top: 30px;
 }
