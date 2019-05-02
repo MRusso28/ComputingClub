@@ -18,6 +18,7 @@ module.exports = {
     },
 
     deleteEvent(req, res, next){
+        console.log(req.body);
         EventModel.findOneAndDelete(req.body, function(err){
             if(err) res.send(err);
             res.send('Successfully deleted event');

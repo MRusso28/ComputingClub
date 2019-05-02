@@ -1,16 +1,66 @@
 qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http", "Auth", function ($scope, $location, $window, $http, Auth) {
+
     
+    if(JSON.parse(sessionStorage.getItem("userInfo")) == null){
+        $scope.adminBtns = false;
+        $scope.approvedBtns = false;
+        $scope.loggedIn = false;
+        
+    }else{
+        $scope.adminBtns = JSON.parse(sessionStorage.getItem("userInfo")).officer;
+        $scope.approvedBtns = JSON.parse(sessionStorage.getItem("userInfo")).approved;
+        $scope.loggedIn = true;
+
+    }
+
+    console.log('approved: ' + $scope.approvedBtns);
+
+
     $scope.loadEvents = function(){
         $http.get("/events")
             .then(function (result) {
                 console.log(result.data);
                 $scope.events = result.data;
-                
+
             }, function (error) {
                 console.log(error);
             });
 
+
+            $scope.adminBtns = JSON.parse(sessionStorage.getItem("userInfo")).officer;
+            $scope.approvedBtns = JSON.parse(sessionStorage.getItem("userInfo")).approved;
+            //console.log($scope.adminBtns);
+
         
+    };
+
+    $scope.editEvent = function(event){
+        sessionStorage.setItem("eventToChange", JSON.stringify(event));
+        $location.path("/modifyEvent");
+    };
+
+    $scope.deleteEvent = function(event){
+        $http.defaults.headers.delete = { "Content-Type": "application/json;charset=utf-8" };
+        console.log(event);
+        $http.delete("/events", {data: event})
+        .then(function(result){
+            console.log(result);
+            $scope.loadEvents();
+        }, function(error){
+            console.log(error);
+        });
+    };
+
+    $scope.signout = function(){
+
+        Auth.signout().then(function(result){
+            $location.path("/");
+        }, 
+        function(err){
+            $location.path("/");
+        });
+        
+
     };
 
     $scope.toggleEventDesc = function(event){
@@ -35,7 +85,7 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
         .then(function (result) {
             console.log(result);
             $scope.loadEvents("/events");
-            
+
         }, function (error) {
             console.log(error);
         });
@@ -45,6 +95,7 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
 
     $scope.$on('$viewContentLoaded', function() {
         $scope.loadEvents();
+
     });
 
     $scope.goToAddEvent = function(){

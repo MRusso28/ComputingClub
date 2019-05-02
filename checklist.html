@@ -52,7 +52,7 @@
   <h1 class="titlebar gen-text event-header">Event Checklist</h1>
 
   <div class="myContainer">
-    <div class="task__head task--row">YOUR TASKS (CLICK & HOLD TO REMOVE)</div>
+    <div class="task__head task--row">Checklist for event</div>
     <form action="">
       <div class="task__list">
         <label for="task--1" class="task"><input class="task__check" type="checkbox" id="task--1" />
@@ -76,6 +76,9 @@
       </div>
       <div class="task--row task__footer">
         <input class="task__add" type="text" value="+ Click here to add new task">
+      </div>
+      <div class="task--row task__footerDelete">
+        <button class="task__delete" value="Delete Checklist" type="button" ng-click="deleteChecklist()"> Delete Checklist </button>
       </div>
     </form>
   </div>

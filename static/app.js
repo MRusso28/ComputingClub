@@ -6,6 +6,7 @@ qccApp.config(function ($routeProvider) {
                       templateUrl: "partials/index.html"
         })
         .when("/", {redirectTo: "/index"})
+        .when("/modifyEvent", {controller: "ModifyEventController", templateUrl: "partials/modifyEvent.html"})
         .when("/apply", {controller: "ApplyController", templateUrl: "partials/applyMembership.html"})
         .when("/login", {controller: "LoginController", templateUrl: "partials/login.html"})
         .when("/events", {controller: "EventsController", templateUrl: "partials/events.html"})
@@ -14,6 +15,9 @@ qccApp.config(function ($routeProvider) {
         .when("/addCareerResource", {controller: "AddCareerResourceController", templateUrl: "partials/addCareerResource.html"})
         .when("/modifyCareerResource", {controller: "ModifyCareerResourceController", templateUrl: "partials/modifyCareerResource.html"})
         .when("/careerResource", {controller: "CareerResourceController", templateUrl: "partials/careerResource.html"})
+        .when("/checklist", {controller: "ChecklistController", templateUrl: "partials/checklist.html"})
+        .when("/updateChecklist", {controller: "UpdateChecklistController", templateUrl: "partials/updateChecklist.html"})
+        .when("/addChecklist", {controller: "AddChecklistController", templateUrl: "partials/addChecklist.html"})
 
         //.when("/checklist")
         // .when("/recipes/:recipe_id",  { controller: "ViewRecipeController", templateUrl: "app/partials/view_recipe.html" })
