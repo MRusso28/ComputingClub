@@ -13,7 +13,7 @@
           <a class="nav-link" href="/#/index">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Career</a>
+          <a class="nav-link" href="">Career</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" id="events-tab" href="/#/events">Events</a>
@@ -26,10 +26,11 @@
         </li>
       </ul>
       <form class="form-inline login-form">
+        <a class="nav-link" href="/#/addCareerResource" id="checklist-tab">Add Resource</a>
         <button class="btn btn-action" type="button" ng-click="login()" id="login-btn">Login</button>
       </form>
       <form class="form-inline signup-form">
-          <a class="nav-link" href="/#/addCareerResource" id="checklist-tab">Add Resource</a>
+
           <button class="btn btn-action" type="button" ng-click="applyForMembership()" id="apply-btn">Apply</button>
           <button class="btn btn-action" type="button" ng-click="signout()" id="signout-btn">Sign Out</button>
 
@@ -41,19 +42,6 @@
     <div class="content">
       <h1 class="titlebar gen-text event-header">Career Resources</h1>
 
-        <!-- <div class="jumbotron jumbotron-event hackathon" ng-repeat="resource in resource">
-          <div class="jumbo-content">
-            <h1 class="gen-text">{{resource.name}}</h1>
-            <p class="lead gen-text">{{resource.link}}</p>
-            <a ng-href="{{resource.link}}">link</a>
-            <p class="lead gen-text">{{resource.desc}}</p>
-            <p class="lead gen-text">
-            </p>
-
-          </div>
-        </div> -->
-
-
 
 
 <div class="container" id="myContainer" ng-repeat="resource in resource">
@@ -61,16 +49,14 @@
     <div class="horiz-card">
       <div class="horiz-card-content horiz-card-shadow">
 
-          <h4 class="not-gen-text">{{resource.name}}</h4>
-          <p class="lead not-gen-text">{{resource.desc}}</p>
+          <h3 class="not-gen-text">{{resource.name}}</h3>
+          <h4 class="lead not-gen-text">{{resource.desc}}</h4>
           <p class="lead not-gen-text">{{resource.link}}</p>
           <a ng-href="{{resource.link}}">link</a>
 
-        <div class="horiz-card-header col-md-10 lime">
           <button class="btn btn-action" type="button" ng-click="deleteResource(resource)" id="deleteResource-btn">Delete</button>
           <button class="btn btn-action" type="button" ng-click="updateResource(resource)" id="updateResource-btn">Update</button>
 
-        </div>
         <div class="col-md-10">
         </div>
 
