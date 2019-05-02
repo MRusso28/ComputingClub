@@ -14,17 +14,18 @@ qccApp.controller("AddEventController", ["$scope", "$location", "$window", "$htt
 
     $scope.addEvent = function(){
         var event = {
-            name: $('#eventname').val(),
-            headline: $('#headline').val(),
-            desc: $('#desc').val(),
-            datetime: $('#datetime').val(),
-            location: $('#location').val(),
+            name: $scope.name,
+            headline: $scope.headline,
+            desc: $scope.desc,
+            datetime: $scope.datetime,
+            location: $scope.location,
             showDesc: false
         };
         
         $http.post("/events", event)
         .then(function(result){
             console.log(result);
+            $location.path("/events");
         }, 
         function(err){
             console.log(err);

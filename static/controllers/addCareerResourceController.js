@@ -11,6 +11,7 @@ qccApp.controller("AddCareerResourceController", ["$scope", "$location", "$windo
         $http.post("/careerResource", resource)
         .then(function(result){
             console.log(result);
+            $location.path("/careerResource");
         },
         function(err){
             console.log(err);

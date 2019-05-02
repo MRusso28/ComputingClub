@@ -501,6 +501,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 #submitBtn {
@@ -817,7 +818,7 @@ padding-top: 1.4rem;
 #myContainer {
   width: 1840px;
   margin: 0 auto;
-  margin-top:100px;
+  margin-bottom:100px;
   float: none;
 }
 .horiz-card {
@@ -898,6 +899,7 @@ padding-top: 1.4rem;
 #updateResource-btn{
   float: right;
     margin-top: 100px;
+}
 
 .edit-icon-div{
   margin-left: 0;
