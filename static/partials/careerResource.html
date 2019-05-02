@@ -49,15 +49,15 @@
 
 <div class="container" id="myContainer">
   <div class="row">
-      <div class="card" style="width: 18rem;" ng-repeat="resource in resource">
-          <div class="card-body">
-            <h5 class="card-title">{{resource.name}}</h5>
-            <p class="card-text">{{resource.name}}</p>
-            <a ng-href="{{resource.link}}" class="card-link">Link</a>
+      <div class="card" style="width: 18rem;" ng-repeat="resource in resource" id="cardbody">
+          <div class="card-body" >
+            <h2 class="card-title" id="resourceTitle">{{resource.name}}</h2>
+            <p class="card-text" id="resourceDesc">{{resource.desc}}</p>
+            <a ng-href="{{resource.link}}" class="card-link">Read More</a>
           </div>
           <div class="edit-icon-div row">
-            <i class="fas fa-edit fa-1x btn btn-action btn-lg" ng-show="adminBtns" ng-click="updateResource(resource)"></i>
-            <i class="fas fa-trash-alt btn btn-action btn-lg" ng-show="adminBtns" ng-click="deleteResource(resource)"></i>
+            <i class="fas fa-edit fa-1x btn btn-action btn-lg" ng-show="adminBtns" ng-click="updateResource(resource)" id="careerIcon"></i>
+            <i class="fas fa-trash-alt btn btn-action btn-lg" ng-show="adminBtns" ng-click="deleteResource(resource)" id="careerIcon"></i>
 
           </div>
         </div>

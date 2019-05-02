@@ -40,14 +40,14 @@
 
 <div class="container" id="myContainer">
     <div class="row">
-        <div class="card" style="width: 18rem;" ng-if = "student.officer == true" ng-repeat="student in students" >
+        <div class="card" style="width: 18rem;" ng-if = "student.officer == true" ng-repeat="student in students" id="cardbody">
             <div class="card-body">
-              <h5 class="card-title">{{student.name}}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Grad Year: {{student.gradYear}}</h6>
-              <p class="card-text">Email: {{student.email}}</p>
+              <h5 class="card-title" id="resourceTitle">{{student.name}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted" id="resourceDesc">Grad Year: {{student.gradYear}}</h6>
+              <p class="card-text" id="resourceDesc">Email: {{student.email}}</p>
             </div>
           </div>
-  
+
       </div>
     </div>
 

@@ -910,5 +910,22 @@ padding-top: 1.4rem;
 }
 #addChecklistbtn{
  margin: auto;
+}
 
+#cardBody{
+  margin-right: 12px;
+  margin-top: 10px;
+  background-color: #031826;
+}
+
+#resourceTitle{
+  color: #d79e1d;
+  background-color: #031826;
+}
+#resourceDesc{
+  color: white;
+  background-color: #031826;
+}
+#myContainer{
+  margin-left: 400px;
 }
