@@ -55,6 +55,11 @@
             <p class="card-text">{{resource.name}}</p>
             <a ng-href="{{resource.link}}" class="card-link">Link</a>
           </div>
+          <div class="edit-icon-div row">
+            <i class="fas fa-edit fa-1x btn btn-action btn-lg" ng-show="adminBtns" ng-click="updateResource(resource)"></i>
+            <i class="fas fa-trash-alt btn btn-action btn-lg" ng-show="adminBtns" ng-click="deleteResource(resource)"></i>
+
+          </div>
         </div>
 
     </div>
