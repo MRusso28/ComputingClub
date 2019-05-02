@@ -549,6 +549,13 @@ input {
   line-height: 50px;
 }
 
+.task--rowComplete {
+  background: #C0C0C0;
+  height: 30px;
+  padding: 0 20px;
+  line-height: 30px;
+}
+
 .task__head {
   background: #d79e1d;
   color: white;
@@ -784,7 +791,6 @@ h3{
   margin-right: 10%;
 }
 
-<<<<<<< Updated upstream
 .edit-icon-div{
   margin-left: 0;
 }
@@ -792,8 +798,6 @@ h3{
 .fa-edit{
   margin-right: 10px;
 }
-=======
 #addChecklistbtn{
-  margin: auto;
+ margin: auto;
 }
->>>>>>> Stashed changes

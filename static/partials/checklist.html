@@ -39,6 +39,7 @@
     </div>
     <div class="myContainer" ng-repeat="checklist in checklists">
       <div class="task__head task--row" id="checklistTitle">{{checklist.title}}</div>
+      <div class="task--rowComplete" id="checklistComplete">Checklist Completed: {{checklist.completed}}</div>
       <form action="">
         <div class="task__list">
           <label for="task--1" class="task"><input class="task__check" type="checkbox" id="task--1" />
@@ -48,10 +49,10 @@
           </label>
         </div>
         <div class="task--row task__footer">
-          <button class="task__add" value="Edit Checklist" type="button" ng-click=""> Edit Checklist </button>
+          <button class="task__add" value="Edit Checklist" type="button" ng-click="editChecklist(checklist)"> Edit Checklist </button>
         </div>
         <div class="task--row task__footerDelete">
-          <button class="task__delete" value="Delete Checklist" type="button" ng-click="deleteChecklist()"> Delete Checklist </button>
+          <button class="task__delete" value="Delete Checklist" type="button" ng-click="deleteChecklist(checklist)"> Delete Checklist </button>
         </div>
       </form>
     </div>

@@ -1,7 +1,7 @@
 qccApp.controller("AddChecklistController", ["$scope", "$location", "$window", "$http", function ($scope, $location, $window, $http) {
 
     $scope.addChecklist = function(){
-        var tasksText = $('#checklistTasks').val().split('; ');
+        var tasksText = $('#checklistTasks').val().split(', ');
         console.log(tasksText);
         var checklist = {
             title: $('#checklistname').val(),
