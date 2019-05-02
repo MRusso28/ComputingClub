@@ -13,19 +13,19 @@ qccApp.controller("ModifyEventController", ["$scope", "$location", "$window", "$
     }
 
     var event = JSON.parse(sessionStorage.getItem("eventToChange"));
-    $('#eventname').val(event.name);
-    $('#headline').val(event.headline);
-    $('#desc').val(event.desc);
-    $('#datetime').val(event.datetime);
-    $('#location').val(event.location);
+    $scope.name = event.name;
+    $scope.headline = event.headline;
+    $scope.desc = event.desc;
+    $scope.datetime = event.datetime;
+    $scope.location = event.location;
 
     $scope.updateEvent = function(){
         var updatedEvent = {
-            name: $('#eventname').val(),
-            headline: $('#headline').val(),
-            desc: $('#desc').val(),
-            datetime: $('#datetime').val(),
-            location: $('#location').val(),
+            name: $scope.name,
+            headline: $scope.headline,
+            desc: $scope.desc,
+            datetime: $scope.datetime,
+            location: $scope.location,
             showDesc: false
         }
 

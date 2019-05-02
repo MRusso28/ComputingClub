@@ -1,5 +1,17 @@
 qccApp.controller("ChecklistController", ["$scope", "$location", "$window", "$http", function ($scope, $location, $window, $http) {
 
+    if(JSON.parse(sessionStorage.getItem("userInfo")) == null){
+        $scope.adminBtns = false;
+        $scope.approvedBtns = false;
+        $scope.loggedIn = false;
+        
+    }else{
+        $scope.adminBtns = JSON.parse(sessionStorage.getItem("userInfo")).officer;
+        $scope.approvedBtns = JSON.parse(sessionStorage.getItem("userInfo")).approved;
+        $scope.loggedIn = true;
+
+    }
+
     $scope.loadChecklists = function(){
         $http.get("/checklist")
             .then(function (result) {

@@ -1,41 +1,41 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="index.html">
-      <img src="images/logo.png" height="35" class="d-inline-block align-top" alt="">
-      Quinnipiac Computing Club
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" height="35" class="d-inline-block align-top" alt="">
+    Quinnipiac Computing Club
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/#/index">Home<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/#/careerResource">Career</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="events-tab" href="/#/events">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  href="/#/officers">Officers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/#/checklist" id="checklist-tab">Checklist</a>
-        </li>
-      </ul>
-      <form class="form-inline login-form">
-        <button class="btn btn-action" type="button" ng-click="login()" id="login-btn">Login</button>
-      </form>
-      <form class="form-inline signup-form">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/#/index">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/#/careerResource">Career</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="events-tab" href="/#/events" ng-show="approvedBtns">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#/officers">Officers</a>
+      </li>
+      <li class="nav-item">
 
-          <button class="btn btn-action" type="button" ng-click="applyForMembership()" id="apply-btn">Apply</button>
-          <button class="btn btn-action" type="button" ng-click="signout()" id="signout-btn">Sign Out</button>
+        <a class="nav-link" href="/#/checklist" id="checklist-tab" ng-show="adminBtns">Checklist</a>
 
-        </form>
+      </li>
+    </ul>
+    <form class="form-inline login-form">
+      <a href="/#/login"><button class="btn btn-action" type="button" id="login-btn" ng-show="!loggedIn">Login</button></a>
+    </form>
+    <form class="form-inline signup-form">
+       <a href="/#/apply"><button class="btn btn-action" type="button" id="apply-btn" ng-show="!loggedIn">Apply</button></a>
+       <button class="btn btn-action" type="button" ng-click="signout()" id="signout-btn" ng-show="loggedIn">Sign Out</button>
+    </form>
 
-    </nav>
+  </nav>
     <div class="content">
 
       <div class="row">

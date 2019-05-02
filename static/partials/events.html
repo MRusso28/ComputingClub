@@ -9,20 +9,20 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/#/index">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#/careerResource">Career</a>
+      </li>
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="career.html">Career</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" id="events-tab" href="/#/events" ng-show="approvedBtns">Events</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="officers.html">Officers</a>
+        <a class="nav-link" href="/#/officers">Officers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="checklist.html" id="checklist-tab" ng-show="adminBtns">Checklist</a>
+        <a class="nav-link" href="/#/checklist" id="checklist-tab" ng-show="adminBtns">Checklist</a>
       </li>
     </ul>
     <form class="form-inline login-form">
@@ -38,6 +38,12 @@
 
     <div class="content">
       <h1 class="titlebar gen-text event-header">Events</h1>
+
+      <div class="row">
+        <div class="div-manage-club-members">
+          <button class="btn btn-action" id="addEventBtn" type="button" ng-click="goToAddEvent()" ng-show="adminBtns">Add Event</button>
+        </div>
+      </div>
 
         <div class="jumbotron jumbotron-event hackathon" ng-repeat="event in events">
           <div class="jumbo-content">
@@ -105,11 +111,7 @@
         </div>
       </div> -->
 
-      <div class="row">
-        <div class="div-manage-club-members">
-          <button class="btn btn-action" id="addEventBtn" type="button" ng-click="goToAddEvent()">Add Event</button>
-        </div>
-      </div>
+
 
     </div>
 

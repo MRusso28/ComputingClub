@@ -9,20 +9,22 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/#/index">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#/careerResource">Career</a>
+      </li>
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="career.html">Career</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" id="events-tab" href="/#/events" ng-show="approvedBtns">Events</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="officers.html">Officers</a>
+        <a class="nav-link" href="/#/officers">Officers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="checklist.html" id="checklist-tab" ng-show="adminBtns">Checklist</a>
+
+        <a class="nav-link" href="/#/checklist" id="checklist-tab" ng-show="adminBtns">Checklist</a>
+
       </li>
     </ul>
     <form class="form-inline login-form">
@@ -45,25 +47,25 @@
         <div class="row">
           <div class="col">
               <label for="exampleFormControlInput1" class="gen-text">Name</label>
-            <input type="text" class="form-control" placeholder="Event name" id="eventname">
+            <input type="text" ng-model="name" class="form-control" placeholder="Event name" id="eventname">
           </div>
           <div class="col">
               <label for="exampleFormControlInput1" class="gen-text">Headline</label>
-            <input type="text" class="form-control" placeholder="Featured description" id="headline">
+            <input type="text"  ng-model="headline" class="form-control" placeholder="Featured description" id="headline">
           </div>
         </div>
         <div class="form-group" id="padding">
           <label for="exampleFormControlInput1" class="gen-text">Description</label>
-          <textarea type="text" class="form-control" id="desc" placeholder="Describe the event in detail" > </textarea>
+          <textarea type="text"  ng-model="desc" class="form-control" id="desc" placeholder="Describe the event in detail" > </textarea>
         </div>
         <div class="row">
           <div class="col">
             <label for="exampleFormControlInput1" class="gen-text">Date & Time</label>
-            <input type="text" class="form-control" placeholder="Dec 29 2011 20:14:56" id="datetime">
+            <input type="text" ng-model="datetime" class="form-control" placeholder="Dec 29 2011 20:14:56" id="datetime">
           </div>
           <div class="col">
             <label for="exampleFormControlInput1" class="gen-text">Location</label>
-            <input type="text" class="form-control" placeholder="CCE-030" id="location">
+            <input type="text" ng-model="location" class="form-control" placeholder="CCE-030" id="location">
           </div>
         </div>
 
