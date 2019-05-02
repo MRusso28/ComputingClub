@@ -15,7 +15,7 @@ qccApp.controller("ChecklistController", ["$scope", "$location", "$window", "$ht
       if (confirm('Are you sure you want to delete this checklist?')) {
         $http.defaults.headers.delete = {"Content-Type": "application/json;charset=utf-8" };
           console.log(checklist);
-          $http.delete("/checklist", checklist)
+          $http.delete("/checklist", {data: checklist})
               .then(function (result) {
                   console.log(result);
               }, function (error) {
@@ -36,6 +36,12 @@ qccApp.controller("ChecklistController", ["$scope", "$location", "$window", "$ht
            }, function(error){
                console.log(error);
            });
+       };
+
+    $scope.editChecklist = function(checklist){
+       sessionStorage.setItem("checklistToChange", JSON.stringify(checklist));
+            console.log(checklist);
+           $location.path("/updateChecklist");
        };
 
     $scope.$on('$viewContentLoaded', function(){
