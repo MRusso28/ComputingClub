@@ -35,6 +35,7 @@ qccApp.controller("CareerResourceController", ["$scope", "$location", "$window",
 
 
   $scope.deleteResource = function(resource){
+    if (confirm('Are you sure you want to delete this resource?')) {
       $http.defaults.headers.delete = { "Content-Type": "application/json;charset=utf-8" };//NEED THIS
       console.log(resource);
       $http.delete("/careerResource", {data: resource})//NEED THIS FORMAT TOO
@@ -44,6 +45,9 @@ qccApp.controller("CareerResourceController", ["$scope", "$location", "$window",
       }, function(error){
           console.log(error);
       });
+    } else {
+    }
+
   };
 
   $scope.toggleResourceDesc = function(event) {

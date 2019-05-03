@@ -13,7 +13,7 @@ qccApp.controller("IndexController", ["$scope", "$location", "$window", "Auth", 
             $scope.loggedIn = true;
     
         }
-        console.log($scope.loggedIn);
+        console.log($scope.approvedBtns);
 
     }
 

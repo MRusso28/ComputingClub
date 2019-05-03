@@ -40,7 +40,8 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
     };
 
     $scope.deleteEvent = function(event){
-        $http.defaults.headers.delete = { "Content-Type": "application/json;charset=utf-8" };
+        if (confirm('Are you sure you want to delete this event?')) {
+            $http.defaults.headers.delete = { "Content-Type": "application/json;charset=utf-8" };
         console.log(event);
         $http.delete("/events", {data: event})
         .then(function(result){
@@ -49,6 +50,9 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
         }, function(error){
             console.log(error);
         });
+          } else {
+          }
+        
     };
 
     $scope.signout = function(){
