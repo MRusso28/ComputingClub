@@ -823,6 +823,12 @@ padding-top: 1.4rem;
   margin-bottom:100px;
   float: none;
 }
+#myContainer2 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:100px;
+  float: none;
+}
 .horiz-card {
   display: inline-block;
   height: 200px;
@@ -927,9 +933,6 @@ padding-top: 1.4rem;
 #resourceDesc{
   color: white;
   background-color: #031826;
-}
-#myContainer{
-  margin-left: 15%;
 }
 #notATab{
   color: white;
