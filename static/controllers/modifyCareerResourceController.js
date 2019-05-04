@@ -1,4 +1,4 @@
-qccApp.controller("ModifyCareerResourceController", ["$scope", "$location", "$window", "$http", function ($scope, $location, $window, $http) {
+qccApp.controller("ModifyCareerResourceController", ["$scope", "$location", "$window", "$http", "Auth", function ($scope, $location, $window, $http, Auth) {
 
     if(JSON.parse(sessionStorage.getItem("userInfo")) == null){
         $scope.adminBtns = false;
@@ -38,6 +38,14 @@ qccApp.controller("ModifyCareerResourceController", ["$scope", "$location", "$wi
             console.log(error);
         });
     }
+    $scope.signout = function(){
+        Auth.signout().then(function(result){
+            $location.path("/");
+        },
+        function(err){
+            $location.path("/");
+        });
+    };
 
 
 

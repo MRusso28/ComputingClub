@@ -20,7 +20,6 @@ qccApp.controller("ApplyController", ["$scope", "$location", "$window", "Auth", 
             password: $('#password').val(),
             approved: false,
             officer: false
-
         }
 
         //console.log($scope.newUser);

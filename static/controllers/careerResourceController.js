@@ -24,8 +24,6 @@ qccApp.controller("CareerResourceController", ["$scope", "$location", "$window",
       }, function(error) {
         console.log(error);
       });
-
-
   };
 
   $scope.updateResource = function(resource){
@@ -80,5 +78,14 @@ qccApp.controller("CareerResourceController", ["$scope", "$location", "$window",
   $scope.goToAddResource = function() {
     $location.path("/addResource");
   }
+
+  $scope.signout = function(){
+      Auth.signout().then(function(result){
+          $location.path("/");
+      },
+      function(err){
+          $location.path("/");
+      });
+  };
 
 }]);

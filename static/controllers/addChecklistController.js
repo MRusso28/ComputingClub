@@ -1,4 +1,4 @@
-qccApp.controller("AddChecklistController", ["$scope", "$location", "$window", "$http", function ($scope, $location, $window, $http) {
+qccApp.controller("AddChecklistController", ["$scope", "$location", "$window", "$http", "Auth", function ($scope, $location, $window, $http, Auth) {
 
     $scope.addChecklist = function(){
       if ($('#checklistname').val() == '' || $('#checklistTasks').val() == '') {
@@ -29,4 +29,13 @@ qccApp.controller("AddChecklistController", ["$scope", "$location", "$window", "
     $scope.goToEvents = function(){
         $location.path("/events");
     }
+
+    $scope.signout = function(){
+        Auth.signout().then(function(result){
+            $location.path("/");
+        },
+        function(err){
+            $location.path("/");
+        });
+    };
 }]);

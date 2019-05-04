@@ -940,3 +940,19 @@ padding-top: 1.4rem;
 #alsoNotATab{
   margin-top: 30px;
 }
+.checkMark{
+  color: #D3D3D3;
+}
+.checkMark:hover{
+  color: green;
+}
+.xmark{
+  color: #D3D3D3;
+}
+.xmark:hover{
+  color: red;
+}
+
+#accept{
+  font-size: 20px;
+}

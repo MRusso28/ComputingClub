@@ -22,9 +22,10 @@
         <a class="nav-link" href="/#/officers">Officers</a>
       </li>
       <li class="nav-item">
-
         <a class="nav-link" href="/#/checklist" id="checklist-tab" ng-show="adminBtns">Checklist</a>
-
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#/applications" id="checklist-tab" ng-show="adminBtns">Applications</a>
       </li>
     </ul>
     <form class="form-inline login-form">
@@ -48,7 +49,7 @@
         <div class="row">
           <div class="col">
             <input ng-model="apply.name" ng-class="{ 'is-invalid' : userForm.name.$error.required && !userForm.name.$pristine }"
-            type="text" class="form-control" placeholder="First name" id="name" name="name" required>
+            type="text" class="form-control" placeholder="First name" id="firstname" name="name" required>
             <div ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block invalid-feedback">Please enter first name</div>
           </div>
           <div class="col">

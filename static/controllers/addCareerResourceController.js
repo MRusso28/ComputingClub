@@ -1,4 +1,4 @@
-qccApp.controller("AddCareerResourceController", ["$scope", "$location", "$window", "$http", function ($scope, $location, $window, $http) {
+qccApp.controller("AddCareerResourceController", ["$scope", "$location", "$window", "$http", "Auth", function ($scope, $location, $window, $http, Auth) {
 
     $scope.addResource = function(){
         var resource = {
@@ -17,5 +17,14 @@ qccApp.controller("AddCareerResourceController", ["$scope", "$location", "$windo
             console.log(err);
         });
     }
+
+    $scope.signout = function(){
+        Auth.signout().then(function(result){
+            $location.path("/");
+        },
+        function(err){
+            $location.path("/");
+        });
+    };
 
 }]);

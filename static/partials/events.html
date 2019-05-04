@@ -24,6 +24,9 @@
       <li class="nav-item">
         <a class="nav-link" href="/#/checklist" id="checklist-tab" ng-show="adminBtns">Checklist</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#/applications" id="checklist-tab" ng-show="adminBtns">Applications</a>
+      </li>
     </ul>
     <form class="form-inline login-form">
       <a href="/#/login"><button class="btn btn-action" type="button" id="login-btn" ng-show="!loggedIn">Login</button></a>
@@ -55,7 +58,6 @@
             <div class="edit-icon-div row">
               <i class="fas fa-edit fa-1x btn btn-action btn-lg" ng-show="adminBtns" ng-click="editEvent(event)"></i>
               <i class="fas fa-trash-alt btn btn-action btn-lg" ng-show="adminBtns" ng-click="deleteEvent(event)"></i>
-
             </div>
 
           </div>

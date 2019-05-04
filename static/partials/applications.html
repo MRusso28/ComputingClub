@@ -24,7 +24,7 @@
       <li class="nav-item">
         <a class="nav-link" href="/#/checklist" id="checklist-tab" ng-show="adminBtns">Checklist</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="/#/applications" id="checklist-tab" ng-show="adminBtns">Applications</a>
       </li>
     </ul>
@@ -37,35 +37,45 @@
     </form>
 
   </nav>
-  <div class="content">
 
+<h1 class="titlebar gen-text event-header">Membership Applications</h1>
+
+
+<div class="container" id="myContainer2">
     <div class="row">
-      <h1 class="gen-text" id="membershipH">Login</h1>
-    </div>
-
-    <div class="container info-box" id="formContainer">
-      <form>
-        <div class="form-group" id="padding">
-          <label for="exampleFormControlInput1" class="gen-text">Email address</label>
-          <input type="email" class="form-control" id="email" placeholder="name@example.com" >
-        </div>
-        <div class="row">
-          <div class="col">
-            <label for="exampleFormControlInput1" class="gen-text">Password</label>
-            <input type="password" class="form-control" placeholder="Password" id="password">
+        <div class="card" style="width: 18rem;" ng-if = "student.approved == false" ng-repeat="student in students" id="cardbody">
+            <div class="card-body">
+              <h5 class="card-title" id="resourceTitle">{{student.name}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted" id="resourceDesc">Grad Year: {{student.gradYear}}</h6>
+              <p class="card-text" id="resourceDesc">Email: {{student.email}}</p>
+              <div class="row" id="addChecklistBtn">
+                <div class="col-lg-6">
+                  <h1 id="accept" class="lead gen-text">Accept</h1>
+                </div>
+                <div class="col-lg-6">
+                  <h1 id="accept" class="lead gen-text">Deny</h1>
+                </div>
+              </div>
+              <div class="row" id="addChecklistBtn">
+                <div class="col-lg-6">
+                  <i class="fas fa-check-circle fa-2x btn checkMark" ng-click="accept(student)"></i>
+                </div>
+                <div class="col-lg-6">
+                  <i class="fas fa-times-circle fa-2x btn xmark" ng-click="deny(student)"></i>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row" id="padding">
-          <button type="button" class="btn btn-primary" id="middle" ng-click="login()">Login</button>
 
-        </div>
-      </form>
+      </div>
     </div>
 
-    </div>
+
     <script>
         $(function(){
           reload();
+          $('.event-detail-div').hide();
+
         });
 
   </script>

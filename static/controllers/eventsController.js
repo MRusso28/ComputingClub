@@ -1,11 +1,11 @@
 qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http", "Auth", function ($scope, $location, $window, $http, Auth) {
 
-    
+
     if(JSON.parse(sessionStorage.getItem("userInfo")) == null){
         $scope.adminBtns = false;
         $scope.approvedBtns = false;
         $scope.loggedIn = false;
-        
+
     }else{
         $scope.adminBtns = JSON.parse(sessionStorage.getItem("userInfo")).officer;
         $scope.approvedBtns = JSON.parse(sessionStorage.getItem("userInfo")).approved;
@@ -31,7 +31,7 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
             $scope.approvedBtns = JSON.parse(sessionStorage.getItem("userInfo")).approved;
             //console.log($scope.adminBtns);
 
-        
+
     };
 
     $scope.editEvent = function(event){
@@ -55,11 +55,11 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
 
         Auth.signout().then(function(result){
             $location.path("/");
-        }, 
+        },
         function(err){
             $location.path("/");
         });
-        
+
 
     };
 
@@ -101,4 +101,12 @@ qccApp.controller("EventsController", ["$scope", "$location", "$window", "$http"
     $scope.goToAddEvent = function(){
         $location.path("/addEvent");
     }
+    $scope.signout = function(){
+        Auth.signout().then(function(result){
+            $location.path("/");
+        },
+        function(err){
+            $location.path("/");
+        });
+    };
 }]);

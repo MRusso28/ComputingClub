@@ -1,4 +1,4 @@
-qccApp.controller("UpdateChecklistController", ["$scope", "$location", "$window", "$http", function ($scope, $location, $window, $http) {
+qccApp.controller("UpdateChecklistController", ["$scope", "$location", "$window", "$http", "Auth", function ($scope, $location, $window, $http, Auth) {
 
     var checklist = JSON.parse(sessionStorage.getItem("checklistToChange"));
     console.log(checklist);
@@ -7,7 +7,7 @@ qccApp.controller("UpdateChecklistController", ["$scope", "$location", "$window"
 
     for(var i = 0; i < checklist.tasks.length; i++){
       $scope.tasks += checklist.tasks[i] + ', ';
-      
+
 
     }
 
@@ -55,4 +55,12 @@ qccApp.controller("UpdateChecklistController", ["$scope", "$location", "$window"
     $scope.goToEvents = function(){
         $location.path("/events");
     }
+    $scope.signout = function(){
+        Auth.signout().then(function(result){
+            $location.path("/");
+        },
+        function(err){
+            $location.path("/");
+        });
+    };
 }]);
