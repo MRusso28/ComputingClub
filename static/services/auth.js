@@ -14,7 +14,12 @@ qccApp.factory("Auth", ["$http","$q","$window", function ($http, $q, $window) {
                     officer: result.data.user.officer,
                     approved: result.data.user.approved
                 };
-                $window.sessionStorage["userInfo"] = JSON.stringify(userInfo);
+                if(userInfo.approved){
+                    $window.sessionStorage["userInfo"] = JSON.stringify(userInfo);
+
+                }else{
+                    alert('You have not been approved yet, please try again later');
+                }
                 deferred.resolve(userInfo);
             }, function (error) {
                 deferred.reject(error);
@@ -30,14 +35,6 @@ qccApp.factory("Auth", ["$http","$q","$window", function ($http, $q, $window) {
 
         $http.post("/students/auth", data)
             .then(function (result) {
-                console.log(result);
-                userInfo = {
-                    accessToken: result.data.user.token,
-                    email: result.data.user.email,
-                    officer: result.data.user.officer,
-                    approved: result.data.user.approved
-                };
-                $window.sessionStorage["userInfo"] = JSON.stringify(userInfo);
                 deferred.resolve(userInfo);
             }, function (error) {
                 deferred.reject(error);
